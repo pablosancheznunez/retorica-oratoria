@@ -10,9 +10,9 @@ Persuadir no es manipular. Este libro defiende una retórica **rigurosa**: argum
 
 ::: {.callout-note appearance="simple" icon="false"}
 ## Cómo citar este libro
-> Sánchez-Núñez, P. (2026). *Retórica y oratoria para la investigación: argumentar, persuadir y hablar en público con rigor*. Universidad Carlos III de Madrid. Zenodo.
+> Sánchez-Núñez, P. (2026). *Retórica y oratoria para la investigación: argumentar, persuadir y hablar en público con rigor*. Universidad Carlos III de Madrid. Zenodo. <https://doi.org/10.5281/zenodo.24534421>
 
-**Autor:** Pablo Sánchez-Núñez ([ORCID 0000-0001-7845-9506](https://orcid.org/0000-0001-7845-9506)), Universidad Carlos III de Madrid. Texto bajo licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es).
+**Autor:** Pablo Sánchez-Núñez ([ORCID 0000-0001-7845-9506](https://orcid.org/0000-0001-7845-9506)), Universidad Carlos III de Madrid. **DOI:** [10.5281/zenodo.24534421](https://doi.org/10.5281/zenodo.24534421). Texto bajo licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es).
 :::
 
 ## Mapa del libro

@@ -3,6 +3,14 @@ message: Si usas este libro, cítalo así.
 type: book
 title: Retórica y oratoria para la investigación
 version: 1.0.0
+doi: "10.5281/zenodo.24534421"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24534421"
+    description: "DOI de todas las versiones (concept DOI)"
+  - type: doi
+    value: "10.5281/zenodo.24534422"
+    description: "DOI de la versión 1.0.0"
 date-released: '2026-11-25'
 license: CC-BY-4.0
 url: https://pablosancheznunez.com/retorica-oratoria/
