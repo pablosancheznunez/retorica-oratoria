@@ -1,0 +1,190 @@
+---
+engine: markdown
+---
+
+# Capítulo 5. La voz, el cuerpo y los nervios {#sec-cap5}
+
+::: {.callout-note appearance="default"}
+## Objetivos
+- Usar la voz (ritmo, volumen, pausas, entonación) y el cuerpo (mirada, postura, gesto) al servicio del mensaje.
+- Entender la ansiedad al hablar en público y aplicar estrategias con apoyo empírico.
+- Ensayar con método y medir el propio discurso.
+:::
+
+::: {.callout-note appearance="simple" icon="false"}
+## Glosario del capítulo
+[Actio](92-glosario.qmd#gl-actio) · [Ritmo del habla](92-glosario.qmd#gl-ritmo) · [Pausa](92-glosario.qmd#gl-pausa) · [Ansiedad al hablar en público](92-glosario.qmd#gl-ansiedad) · [Exposición gradual](92-glosario.qmd#gl-exposicion) · [Legibilidad](92-glosario.qmd#gl-legibilidad)
+:::
+
+::: {.callout-tip appearance="simple" icon="false"}
+## Descargas
+[Plantilla de entrega del reto (.qmd)](plantillas/entrega_reto.qmd){.btn .btn-outline-primary .btn-sm download="entrega_reto.qmd"}
+[Tema de estilo (.scss)](plantillas/informe.scss){.btn .btn-outline-primary .btn-sm download="informe.scss"}
+:::
+
+## Lectura obligatoria
+
+::: {.lectura}
+Bodie, G. D. (2010). [A racing heart, rattling knees, and ruminative thoughts: Defining, explaining, and treating public speaking anxiety](https://doi.org/10.1080/03634520903443849). *Communication Education*, 59(1), 70-105.
+:::
+
+## 1. La voz
+
+| Recurso | Para qué | Consejo |
+|---|---|---|
+| **Ritmo** | Que el público pueda seguir | Unas 120-150 palabras por minuto en una charla técnica; más despacio en las ideas clave |
+| **Pausa** | Separar ideas, destacar, dejar pensar | Calla dos segundos antes y después del dato principal |
+| **Volumen** | Que se oiga al fondo de la sala | Habla para la última fila; usa micrófono si lo hay |
+| **Entonación** | Señalar qué importa | Evita la monotonía y el «tono de lectura» |
+| **Muletillas** | — | Sustitúyelas por pausas: el silencio parece seguridad |
+
+## 2. El cuerpo
+
+- **Mirada**: reparte el contacto visual por toda la sala; en línea, mira a la cámara en los momentos clave.
+- **Postura**: estable, de frente al público, sin dar la espalda para leer la pantalla.
+- **Gesto**: natural y al servicio del contenido (señalar el dato, marcar una enumeración).
+- **Espacio**: muévete con intención (cambiar de lugar al cambiar de idea), no por nervios.
+
+## 3. Los nervios
+
+La **ansiedad al hablar en público** es una de las formas de ansiedad social más frecuentes. Bodie (2010) la describe en tres planos: **fisiológico** (corazón acelerado, temblor), **cognitivo** (pensamientos rumiativos, miedo a la evaluación) y **conductual** (evitar, hablar deprisa). Las intervenciones con más apoyo actúan sobre esos planos:
+
+- **Exposición gradual** y práctica repetida en situaciones de dificultad creciente.
+- **Reestructuración cognitiva**: cuestionar pensamientos como «se van a dar cuenta de que no sé» o «si me trabo, es un desastre».
+- **Desarrollo de habilidades**: preparar bien el contenido y ensayar reduce la incertidumbre.
+- **Técnicas de regulación fisiológica**, como la respiración lenta antes de empezar.
+
+Un poco de activación es normal y útil: mejora la atención. El objetivo no es eliminar los nervios, sino que no gobiernen la charla. Si la ansiedad es intensa y limita tu vida académica, merece la pena consultar a un profesional; muchas universidades tienen servicios de apoyo psicológico.
+
+## Laboratorio: mide tu discurso {#lab-c5-discurso}
+
+::: {.laboratorio}
+::: {.laboratorio-etiqueta}
+Laboratorio · se ejecuta en tu navegador; tu texto no sale de él
+:::
+
+Pega el guion de una charla. El laboratorio calcula cuánto durará a la velocidad que elijas, la longitud media de las frases, las frases demasiado largas para decirlas de un tirón y la **legibilidad** con el índice de Fernández Huerta (adaptación al español del de Flesch; más alto = más fácil).
+
+```{ojs}
+//| echo: false
+area = window.Lab.area
+rango = window.Lab.rango
+viewof guion = area("Guion", {rows: 7, submit: "Analizar", value: "Imaginen que cada año miles de doctorandos empiezan su tesis con ilusión. Casi un tercio la abandona antes de terminar. Durante cinco años seguimos a mil doscientos doctorandos de catorce universidades españolas, midiendo cada seis meses su bienestar, su relación con la dirección y su productividad, con el objetivo de identificar qué factores, de entre todos los que la literatura había propuesto en las últimas dos décadas, predecían mejor el abandono. El resultado fue claro. La calidad de la supervisión pesaba más que la financiación."})
+viewof ppm = rango("Velocidad (palabras por minuto)", [100, 180], {step: 5, value: 135})
+```
+
+```{ojs}
+//| echo: false
+{
+  const frases = guion.replace(/\s+/g, " ").split(/(?<=[.!?…])\s+/).filter(f => f.trim());
+  const palabras = guion.toLowerCase().match(/[a-záéíóúüñ]+/gi) || [];
+  const silabas = w => { const g = w.toLowerCase().replace(/[^a-záéíóúüñ]/g, "").replace(/qu|gu(?=[eéií])/g, "q").match(/[iuü][aáeéoó]|[aáeéoó][iuü](?![aáeéoó])|[iu][iu]|[aáeéiíoóuúü]/g); return Math.max(1, (g || []).length); };
+  const nP = palabras.length, nS = palabras.reduce((s, w) => s + silabas(w), 0), nF = Math.max(1, frases.length);
+  const P = 100 * nS / nP, F = 100 * nF / nP, fh = 206.84 - 0.60 * P - 1.02 * F;
+  const largas = frases.filter(f => (f.match(/\S+/g) || []).length > 30);
+  const mins = nP / ppm, mm = Math.floor(mins), ss = Math.round((mins - mm) * 60);
+  const nivel = fh >= 80 ? "fácil" : fh >= 60 ? "normal" : fh >= 40 ? "algo difícil" : "difícil";
+  const d = html`<div role="status"></div>`;
+  d.innerHTML = `<ul><li>${nP} palabras · duración estimada <strong>${mm} min ${String(ss).padStart(2, "0")} s</strong> a ${ppm} palabras por minuto</li>
+   <li>${nF} frases · media de <strong>${(nP / nF).toFixed(1).replace(".", ",")}</strong> palabras por frase</li>
+   <li>Legibilidad (Fernández Huerta): <strong>${fh.toFixed(0)}</strong> · ${nivel}</li></ul>
+   ${largas.length ? `<p class="lab-medio" style="font-weight:600">${largas.length} frase${largas.length > 1 ? "s" : ""} de más de 30 palabras: difícil de decir y de seguir. Divídela.</p><blockquote class="small">${largas[0].replace(/</g, "&lt;")}</blockquote>` : '<p class="lab-bien" style="font-weight:600">Ninguna frase supera las 30 palabras.</p>'}
+   <p class="small">El recuento de sílabas es aproximado. Escribir para el oído pide frases más cortas que escribir para la vista.</p>`;
+  return d;
+}
+```
+:::
+
+## Laboratorio: cronómetro de ensayo {#lab-c5-crono}
+
+::: {.laboratorio}
+::: {.laboratorio-etiqueta}
+Laboratorio · se ejecuta en tu navegador
+:::
+
+Ensaya en voz alta con tiempo real. Elige la duración y pulsa **Empezar**: el cronómetro avisa cuando llevas la mitad, cuando queda un 20 % y cuando se acaba.
+
+```{ojs}
+//| echo: false
+viewof dur = rango("Duración de la charla (minutos)", [1, 20], {step: 1, value: 3})
+```
+
+```{ojs}
+//| echo: false
+{
+  const c = html`<div class="lab-crono"><p class="lab-reloj" style="font-size:2.4rem;font-variant-numeric:tabular-nums;font-weight:600;margin:0" aria-live="off">0:00</p>
+    <p class="lab-fase" role="status" aria-live="polite">Pulsa Empezar cuando comiences a hablar.</p>
+    <div class="d-flex gap-2"><button type="button" class="btn btn-primary btn-sm">Empezar</button><button type="button" class="btn btn-outline-primary btn-sm">Parar</button></div></div>`;
+  const [reloj, fase, ini, fin] = [c.querySelector(".lab-reloj"), c.querySelector(".lab-fase"), ...c.querySelectorAll("button")];
+  let t0 = null, id = null, avisos = new Set();
+  const total = dur * 60;
+  const tick = () => { const s = Math.floor((Date.now() - t0) / 1000); reloj.textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+    const msgs = [[0.5, "Mitad del tiempo: ¿vas por la mitad del contenido?"], [0.8, "Queda un 20 %: ve hacia la conclusión."], [1, "Tiempo cumplido: termina con tu mensaje principal."]];
+    for (const [f, m] of msgs) if (s >= total * f && !avisos.has(f)) { avisos.add(f); fase.textContent = m; }
+    if (s >= total * 1.1) { reloj.style.color = "#a52a1a"; } };
+  ini.onclick = () => { clearInterval(id); t0 = Date.now(); avisos = new Set(); reloj.style.color = ""; fase.textContent = "Hablando…"; id = setInterval(tick, 250); };
+  fin.onclick = () => { clearInterval(id); if (t0) fase.textContent = `Has hablado ${reloj.textContent} de ${dur}:00.`; };
+  invalidation.then(() => clearInterval(id));
+  return c;
+}
+```
+:::
+
+## Actividades
+
+::: {.clasificar #ia-c5-plano titulo="¿Qué plano de la ansiedad describe? (Bodie, 2010)" categorias="Fisiológico|Cognitivo|Conductual"}
+- El corazón late muy deprisa antes de empezar → Fisiológico
+- «Seguro que me preguntan algo que no sé y quedaré en ridículo» → Cognitivo
+- Rechazar presentar en el congreso → Conductual
+- Hablar cada vez más rápido para terminar cuanto antes → Conductual
+- Temblor en las manos → Fisiológico
+- Repasar mentalmente una y otra vez un error de la charla anterior → Cognitivo
+:::
+
+::: {.clasificar #ia-c5-estrategia titulo="¿Ayuda o empeora a medio plazo?" categorias="Ayuda|Empeora"}
+- Ensayar la charla en voz alta tres veces, la última ante dos colegas → Ayuda
+- Evitar todas las presentaciones durante el doctorado → Empeora // La evitación mantiene la ansiedad.
+- Memorizar el guion palabra por palabra → Empeora // Un olvido deja en blanco; mejor ensayar la estructura.
+- Llegar con tiempo y comprobar el proyector y el micrófono → Ayuda
+- Respirar despacio durante un minuto antes de empezar → Ayuda
+:::
+
+## Reto evaluable {#reto-c5}
+
+::: {.callout-important appearance="simple" icon="false"}
+## Reto del capítulo 5 · Tu tesis en tres minutos
+1. Prepara una charla de **tres minutos** sobre tu tesis con **una sola diapositiva**, para un público no especialista.
+2. Analiza el guion con el laboratorio: duración, frases largas y legibilidad. Corrígelo.
+3. **Grábate** dos veces (primera versión y versión final) y anota qué cambias en voz, ritmo, pausas, mirada y gesto.
+4. Escribe una breve reflexión sobre tus nervios: qué sentiste en cada plano y qué estrategia probaste.
+
+**Entrega:** los dos vídeos y la reflexión con la [plantilla de entrega](plantillas/entrega_reto.qmd). Este reto **no tiene solución en el libro**.
+:::
+
+## Autoevaluación
+
+Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la nota.
+
+::: {.webex-check .webex-box}
+1. Una velocidad razonable en una charla técnica es de unas {{< mcq "60-80" "*120-150" "200-250" >}} palabras por minuto
+2. Sustituir las muletillas por pausas transmite más seguridad. {{< torf true >}}
+3. Según Bodie (2010), la ansiedad al hablar en público tiene componentes fisiológicos, cognitivos y {{< fitb "conductuales" ignorecase=true >}}
+4. Evitar hablar en público reduce la ansiedad a largo plazo. {{< torf false >}}
+5. Practicar en situaciones de dificultad creciente es la exposición {{< fitb "gradual" ignorecase=true >}}
+6. El objetivo es eliminar por completo los nervios. {{< torf false >}}
+7. El índice de Fernández Huerta mide la {{< mcq "velocidad del habla" "*legibilidad de un texto en español" "longitud de la charla" >}}
+8. ¿Por qué no conviene memorizar el guion palabra por palabra?
+
+{{< longmcq "Porque se tarda demasiado" "*Porque un olvido puntual puede bloquear toda la charla; es mejor ensayar la estructura" "Porque al público no le importa" >}}
+:::
+
+::: {.webex-solution boton="Ver explicaciones"}
+- Más despacio en las ideas clave.
+- El silencio parece control.
+- Tres planos.
+- La evitación mantiene el miedo.
+- *Graded exposure*.
+- Un poco de activación ayuda.
+- Adaptación de Flesch al español.
+- La estructura permite recuperarse.
+:::

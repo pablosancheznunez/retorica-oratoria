@@ -1,0 +1,124 @@
+---
+engine: markdown
+---
+
+# Glosario {#sec-glosario}
+
+Términos del libro ordenados por capítulo.
+
+## La retórica clásica hoy
+
+### Retórica {#gl-retorica}
+Facultad de ver, en cada caso, los medios de persuasión disponibles (Aristóteles). → [Capítulo 1](01-retorica.qmd)
+
+### Ethos {#gl-ethos}
+Persuasión basada en la credibilidad y el carácter de quien habla. → [Capítulo 1](01-retorica.qmd)
+
+### Pathos {#gl-pathos}
+Persuasión basada en las emociones y los valores del auditorio. → [Capítulo 1](01-retorica.qmd)
+
+### Logos {#gl-logos}
+Persuasión basada en la razón: datos, pruebas y argumentos. → [Capítulo 1](01-retorica.qmd)
+
+### Kairós {#gl-kairos}
+El momento oportuno: qué decir, cuándo y en qué medida. → [Capítulo 1](01-retorica.qmd)
+
+### Cánones de la retórica {#gl-canones}
+Inventio, dispositio, elocutio, memoria y actio: las cinco tareas de preparar un discurso. → [Capítulo 1](01-retorica.qmd)
+
+### Auditorio {#gl-auditorio}
+Personas a las que se dirige un discurso y cuya aceptación se busca. → [Capítulo 1](01-retorica.qmd)
+
+## Argumentar
+
+### Argumento {#gl-argumento}
+Conjunto de razones que apoyan una afirmación. → [Capítulo 2](02-argumentar.qmd)
+
+### Modelo de Toulmin {#gl-toulmin}
+Análisis de los argumentos en afirmación, datos, garantía, respaldo, cualificador y refutación. → [Capítulo 2](02-argumentar.qmd)
+
+### Garantía {#gl-garantia}
+Principio que explica por qué los datos apoyan la afirmación. → [Capítulo 2](02-argumentar.qmd)
+
+### Cualificador {#gl-cualificador}
+Expresión de la fuerza con que se afirma algo («probablemente»). → [Capítulo 2](02-argumentar.qmd)
+
+### Refutación {#gl-refutacion}
+Condiciones en las que la afirmación no se cumpliría. → [Capítulo 2](02-argumentar.qmd)
+
+### Falacia {#gl-falacia}
+Argumento que parece válido sin serlo. → [Capítulo 2](02-argumentar.qmd)
+
+### Teoría argumentativa del razonamiento {#gl-argumentativa}
+Propuesta de que razonamos sobre todo para producir y evaluar argumentos ante otros (Mercier y Sperber). → [Capítulo 2](02-argumentar.qmd)
+
+## Persuadir
+
+### Modelo de probabilidad de elaboración {#gl-elm}
+Modelo de la persuasión con dos rutas según la motivación y la capacidad de pensar en el mensaje. → [Capítulo 3](03-persuadir.qmd)
+
+### Ruta central y periférica {#gl-rutas}
+Central: se evalúan los argumentos. Periférica: se responde a señales superficiales. → [Capítulo 3](03-persuadir.qmd)
+
+### Narrativa {#gl-narrativa}
+Relato con personajes, secuencia causal y desenlace. → [Capítulo 3](03-persuadir.qmd)
+
+### Estructura ABT {#gl-abt}
+«Y, pero, por tanto»: contexto, tensión y resolución. → [Capítulo 3](03-persuadir.qmd)
+
+### Encuadre {#gl-encuadre}
+Forma de presentar una información que activa unas interpretaciones y no otras. → [Capítulo 3](03-persuadir.qmd)
+
+## Presentaciones
+
+### Carga cognitiva {#gl-carga}
+Demanda que impone una tarea sobre la memoria de trabajo, que es limitada. → [Capítulo 4](04-presentaciones.qmd)
+
+### Afirmación-evidencia {#gl-ae}
+Diseño de diapositivas con un título que afirma y una prueba visual que lo sostiene. → [Capítulo 4](04-presentaciones.qmd)
+
+### Título afirmación {#gl-tituloafirm}
+Título de diapositiva que es una frase con la conclusión, no un tema. → [Capítulo 4](04-presentaciones.qmd)
+
+### Principio de redundancia {#gl-redundancia}
+Leer y oír a la vez el mismo texto dificulta la comprensión. → [Capítulo 4](04-presentaciones.qmd)
+
+### Mensaje principal {#gl-mensaje}
+Idea que el público debe recordar al terminar, escrita en una frase. → [Capítulo 4](04-presentaciones.qmd)
+
+## Oratoria
+
+### Actio {#gl-actio}
+Presentación del discurso con la voz y el cuerpo. → [Capítulo 5](05-oratoria.qmd)
+
+### Ritmo del habla {#gl-ritmo}
+Velocidad del discurso, en palabras por minuto, y sus variaciones. → [Capítulo 5](05-oratoria.qmd)
+
+### Pausa {#gl-pausa}
+Silencio intencionado para separar ideas, destacar o dejar pensar. → [Capítulo 5](05-oratoria.qmd)
+
+### Ansiedad al hablar en público {#gl-ansiedad}
+Reacción fisiológica, cognitiva y conductual ante hablar en público. → [Capítulo 5](05-oratoria.qmd)
+
+### Exposición gradual {#gl-exposicion}
+Práctica repetida en situaciones de dificultad creciente. → [Capítulo 5](05-oratoria.qmd)
+
+### Legibilidad {#gl-legibilidad}
+Facilidad de lectura de un texto; en español se estima, por ejemplo, con el índice de Fernández Huerta. → [Capítulo 5](05-oratoria.qmd)
+
+## Públicos
+
+### Turno de preguntas {#gl-preguntas}
+Parte de una charla en la que el público pregunta; se prepara como la charla. → [Capítulo 6](06-publicos.qmd)
+
+### Modelo de déficit {#gl-deficit}
+Idea de que el público discrepa de la ciencia solo por falta de información. → [Capítulo 6](06-publicos.qmd)
+
+### Comunicación bidireccional {#gl-bidireccional}
+Comunicación en la que se escucha al público y se dialoga con él. → [Capítulo 6](06-publicos.qmd)
+
+### Mensaje clave {#gl-mensajeclave}
+Cada una de las pocas ideas preparadas para una entrevista o una pieza divulgativa. → [Capítulo 6](06-publicos.qmd)
+
+### Incertidumbre comunicada {#gl-incertidumbre}
+Explicación de qué se sabe, qué no y qué cambiaría la conclusión. → [Capítulo 6](06-publicos.qmd)

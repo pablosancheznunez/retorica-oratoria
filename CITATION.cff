@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: Si usas este libro, cítalo así.
+type: book
+title: Retórica y oratoria para la investigación
+version: 1.0.0
+date-released: '2026-11-25'
+license: CC-BY-4.0
+url: https://pablosancheznunez.com/retorica-oratoria/
+repository-code: https://github.com/pablosancheznunez/retorica-oratoria
+authors:
+- family-names: Sánchez-Núñez
+  given-names: Pablo
+  orcid: https://orcid.org/0000-0001-7845-9506
+  affiliation: Universidad Carlos III de Madrid
+keywords:
+- retórica
+- oratoria
+- argumentación
+- comunicación científica
+- presentaciones
+- hablar en público
+- divulgación

@@ -1,0 +1,177 @@
+---
+engine: markdown
+---
+
+# Capítulo 2. Argumentar {#sec-cap2}
+
+::: {.callout-note appearance="default"}
+## Objetivos
+- Analizar y construir argumentos con el modelo de Toulmin.
+- Reconocer las falacias más frecuentes y valorar cuándo un argumento «falaz» es razonable.
+- Entender por qué discutir en grupo mejora el razonamiento.
+:::
+
+::: {.callout-note appearance="simple" icon="false"}
+## Glosario del capítulo
+[Argumento](92-glosario.qmd#gl-argumento) · [Modelo de Toulmin](92-glosario.qmd#gl-toulmin) · [Garantía](92-glosario.qmd#gl-garantia) · [Cualificador](92-glosario.qmd#gl-cualificador) · [Refutación](92-glosario.qmd#gl-refutacion) · [Falacia](92-glosario.qmd#gl-falacia) · [Teoría argumentativa del razonamiento](92-glosario.qmd#gl-argumentativa)
+:::
+
+::: {.callout-tip appearance="simple" icon="false"}
+## Descargas
+[Plantilla de entrega del reto (.qmd)](plantillas/entrega_reto.qmd){.btn .btn-outline-primary .btn-sm download="entrega_reto.qmd"}
+[Tema de estilo (.scss)](plantillas/informe.scss){.btn .btn-outline-primary .btn-sm download="informe.scss"}
+:::
+
+## Lectura obligatoria
+
+::: {.lectura}
+Mercier, H.; Sperber, D. (2011). [Why do humans reason? Arguments for an argumentative theory](https://doi.org/10.1017/S0140525X10000968). *Behavioral and Brain Sciences*, 34(2), 57-74.
+:::
+
+### Lecturas complementarias {.unnumbered}
+
+- Hahn, U.; Oaksford, M. (2007). [The rationality of informal argumentation: A Bayesian approach to reasoning fallacies](https://doi.org/10.1037/0033-295X.114.3.704). *Psychological Review*, 114(3), 704-732.
+- Toulmin, S. E. (2003). *The uses of argument* (ed. actualizada). Cambridge University Press (original de 1958).
+
+## 1. La anatomía de un argumento: el modelo de Toulmin
+
+Stephen Toulmin propuso describir los argumentos reales (no los silogismos de manual) con seis piezas:
+
+| Pieza | Función | Ejemplo |
+|---|---|---|
+| **Afirmación** (*claim*) | Lo que se quiere defender | La tutoría semanal reduce el abandono del doctorado |
+| **Datos** (*data*) | Los hechos en que se apoya | En el ensayo, abandonó el 8 % con tutoría y el 15 % sin ella |
+| **Garantía** (*warrant*) | Por qué los datos apoyan la afirmación | La asignación fue aleatoria, así que la diferencia se debe a la tutoría |
+| **Respaldo** (*backing*) | Lo que sostiene la garantía | Los ensayos aleatorizados controlan la confusión |
+| **Cualificador** | Con qué fuerza se afirma | Probablemente, en programas parecidos |
+| **Refutación** (*rebuttal*) | Cuándo no se cumpliría | Salvo que los abandonos se debieran a causas económicas |
+
+La pieza que suele faltar en los textos de investigación es la **garantía**: se dan datos y se afirma una conclusión sin explicar por qué unos llevan a la otra. Y el **cualificador** y la **refutación** son el lugar donde un argumento científico muestra su honestidad.
+
+## Laboratorio: construye un argumento de Toulmin {#lab-c2-toulmin}
+
+::: {.laboratorio}
+::: {.laboratorio-etiqueta}
+Laboratorio · se ejecuta en tu navegador
+:::
+
+Rellena las piezas con un argumento de tu investigación y pulsa **Montar**. El laboratorio dibuja el diagrama y te avisa de las piezas que faltan.
+
+```{ojs}
+//| echo: false
+texto = window.Lab.texto
+viewof tl = {
+  const c = html`<div></div>`, campos = [["dato", "Datos", "En el ensayo, abandonó el 8 % con tutoría y el 15 % sin ella"], ["afirm", "Afirmación", "La tutoría semanal reduce el abandono del doctorado"],
+    ["garantia", "Garantía", "La asignación fue aleatoria, así que la diferencia se debe a la tutoría"], ["respaldo", "Respaldo", "Los ensayos aleatorizados controlan la confusión"],
+    ["cual", "Cualificador", "probablemente, en programas parecidos"], ["refut", "Refutación", "salvo que los abandonos se debieran a causas económicas"]];
+  const ins = campos.map(([k, et, v]) => { const t = texto(et, {value: v}); t.addEventListener("input", e => e.stopPropagation()); c.append(t); return [k, t]; });
+  const b = html`<button type="button" class="btn btn-primary btn-sm mt-1">Montar</button>`; c.append(b);
+  const leer = () => Object.fromEntries(ins.map(([k, t]) => [k, t.value.trim()]));
+  c.value = leer(); b.onclick = () => { c.value = leer(); c.dispatchEvent(new Event("input", {bubbles: true})); };
+  return c;
+}
+```
+
+```{ojs}
+//| echo: false
+{
+  const esc = s => (s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  const caja = (x, y, w, t, et, c) => `<foreignObject x="${x}" y="${y}" width="${w}" height="74"><div xmlns="http://www.w3.org/1999/xhtml" style="border:2px solid ${c};border-radius:8px;padding:4px 6px;font-size:11.5px;height:68px;overflow:hidden;background:var(--bs-body-bg)"><strong>${et}</strong><br>${esc(t) || "<em>(falta)</em>"}</div></foreignObject>`;
+  const faltan = [["garantia", "la garantía"], ["cual", "el cualificador"], ["refut", "la refutación"], ["respaldo", "el respaldo"]].filter(([k]) => !tl[k]).map(x => x[1]);
+  const d = html`<div role="status"></div>`;
+  d.innerHTML = `<svg viewBox="0 0 620 260" width="100%" style="max-width:620px" role="img" aria-label="Diagrama de Toulmin del argumento">
+   ${caja(5, 10, 180, tl.dato, "Datos", "#2a78d6")}
+   <line x1="185" y1="47" x2="430" y2="47" stroke="currentColor" stroke-width="1.5" marker-end="url(#fl)"/>
+   <defs><marker id="fl" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="currentColor"/></marker></defs>
+   ${caja(435, 10, 180, (tl.cual ? tl.cual + ": " : "") + tl.afirm, "Afirmación (con cualificador)", "#eb6834")}
+   <line x1="307" y1="47" x2="307" y2="96" stroke="currentColor" stroke-dasharray="3 3"/>
+   ${caja(215, 96, 185, tl.garantia, "Garantía (porque…)", "#1baf7a")}
+   <line x1="307" y1="170" x2="307" y2="180" stroke="currentColor" stroke-dasharray="3 3"/>
+   ${caja(215, 180, 185, tl.respaldo, "Respaldo", "#8a5d00")}
+   <line x1="525" y1="84" x2="525" y2="140" stroke="currentColor" stroke-dasharray="3 3"/>
+   ${caja(435, 140, 180, tl.refut, "Refutación (salvo que…)", "#c0392b")}</svg>
+   <p class="small">${faltan.length ? "Falta " + faltan.join(", ") + ". Sin garantía, el lector no sabe por qué los datos apoyan la afirmación." : "Argumento completo: ahora prueba a escribirlo en un solo párrafo."}</p>`;
+  return d;
+}
+```
+:::
+
+## 2. Falacias: errores que parecen razonamientos
+
+Una **falacia** es un argumento que parece válido sin serlo. Algunas de las más frecuentes en el debate académico y público:
+
+| Falacia | Qué hace | Ejemplo |
+|---|---|---|
+| ***Ad hominem*** | Ataca a la persona, no al argumento | «No le hagas caso, es becario» |
+| **Hombre de paja** | Refuta una versión deformada de la postura contraria | «Quieren prohibir todos los experimentos con animales» |
+| **Apelación a la autoridad** irrelevante | Se apoya en alguien que no es experto en el tema | «Un premio Nobel de física dice que esta dieta funciona» |
+| **Falso dilema** | Presenta solo dos opciones cuando hay más | «O publicamos en revistas de alto impacto o no existimos» |
+| **Pendiente resbaladiza** | Encadena consecuencias sin justificar cada paso | «Si aceptamos preprints, acabará la revisión por pares» |
+| **Post hoc** | Confunde sucesión con causa | «Tras el nuevo plan, subieron las publicaciones: el plan funcionó» |
+| **Generalización apresurada** | Concluye mucho con pocos casos | «Mis tres doctorandos prefieren R: todos lo prefieren» |
+| **Apelación a la ignorancia** | Toma la falta de prueba como prueba | «No se ha demostrado que sea dañino, así que es seguro» |
+
+Hahn y Oaksford (2007) añaden un matiz importante: muchas «falacias» son **razonables según el contenido**. Apelar a la autoridad de un experto en el tema es un buen argumento probable; la pendiente resbaladiza es razonable si cada paso es probable. La pregunta no es «¿qué falacia es?», sino «¿cuánto apoyo da realmente este argumento?».
+
+## 3. Por qué discutimos: la teoría argumentativa
+
+Mercier y Sperber (2011) proponen que la función del razonamiento humano no es tanto llegar solos a la verdad como **producir y evaluar argumentos para convencer a otros**. Eso explica el sesgo de confirmación: somos buenos buscando argumentos para nuestra postura y malos evaluándola. Pero también explica algo esperanzador: en **grupos que discuten**, con personas que no comparten nuestra postura, el razonamiento mejora mucho. La revisión por pares, el seminario de grupo o el tribunal de tesis son aplicaciones de esta idea.
+
+## Actividades
+
+::: {.clasificar #ia-c2-falacias titulo="¿Qué falacia es?" categorias="Ad hominem|Hombre de paja|Falso dilema|Post hoc|Generalización apresurada|Apelación a la ignorancia"}
+- «Su crítica no vale: ni siquiera ha terminado la tesis» → Ad hominem
+- «Mi colega dice que hay que revisar el método, o sea, que todo el estudio es basura» → Hombre de paja
+- «O usamos inteligencia artificial en todo o nos quedaremos atrás» → Falso dilema
+- «Desde que cambiamos de editorial, nos citan más: la editorial lo explica» → Post hoc
+- «Entrevisté a dos directoras de tesis y ninguna usa preregistro: nadie lo usa» → Generalización apresurada
+- «Nadie ha demostrado que este suplemento no funcione» → Apelación a la ignorancia
+:::
+
+::: {.clasificar #ia-c2-pieza titulo="¿Qué pieza de Toulmin es?" categorias="Afirmación|Datos|Garantía|Cualificador|Refutación"}
+- «El 62 % de los encuestados prefiere la versión B» → Datos
+- «Conviene adoptar la versión B» → Afirmación
+- «La muestra es representativa de nuestros usuarios, así que sus preferencias se generalizan» → Garantía
+- «Con toda probabilidad» → Cualificador
+- «A menos que los usuarios móviles se comporten de forma distinta» → Refutación
+:::
+
+## Reto evaluable {#reto-c2}
+
+::: {.callout-important appearance="simple" icon="false"}
+## Reto del capítulo 2 · El argumento de tu tesis
+1. Escribe el **argumento central** de tu tesis con las seis piezas de Toulmin.
+2. Identifica las **tres objeciones** más fuertes que podría plantear un tribunal y responde a cada una.
+3. Busca en un texto polémico de tu campo (un editorial, una réplica) dos falacias y valora, siguiendo a Hahn y Oaksford, cuánto apoyo dan realmente.
+4. Discute tu argumento con alguien que no esté de acuerdo y explica qué cambiaste.
+
+**Entrega:** con la [plantilla de entrega](plantillas/entrega_reto.qmd). Este reto **no tiene solución en el libro**.
+:::
+
+## Autoevaluación
+
+Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la nota.
+
+::: {.webex-check .webex-box}
+1. En el modelo de Toulmin, la pieza que explica por qué los datos apoyan la afirmación es la {{< fitb "garantía" "garantia" ignorecase=true >}}
+2. Refutar una versión deformada de la postura contraria es la falacia del {{< mcq "ad hominem" "*hombre de paja" "falso dilema" >}}
+3. Apelar a la opinión de un experto en el propio tema es siempre una falacia. {{< torf false >}}
+4. Según Mercier y Sperber (2011), el razonamiento funciona mejor {{< mcq "en solitario" "*en grupos que discuten con puntos de vista distintos" "cuando todos piensan igual" >}}
+5. «Después de esto, luego a causa de esto» describe la falacia {{< fitb "post hoc" ignorecase=true >}}
+6. El cualificador indica la fuerza con que se afirma algo. {{< torf true >}}
+7. El sesgo de confirmación encaja con la teoría argumentativa del razonamiento. {{< torf true >}}
+8. ¿Qué pieza suele faltar en los textos de investigación?
+
+{{< longmcq "Los datos" "*La garantía: la explicación de por qué los datos llevan a la conclusión" "La afirmación" >}}
+:::
+
+::: {.webex-solution boton="Ver explicaciones"}
+- *Warrant*.
+- *Straw man*.
+- Depende de la pertinencia y de la experiencia (Hahn y Oaksford).
+- La discusión con desacuerdo mejora el resultado.
+- *Post hoc, ergo propter hoc*.
+- «Probablemente», «en la mayoría de los casos»…
+- Buscamos argumentos para nuestra postura.
+- Se pasa de los datos a la afirmación sin justificar el salto.
+:::

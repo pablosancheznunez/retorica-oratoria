@@ -1,0 +1,44 @@
+---
+engine: markdown
+---
+
+# Listas de comprobación {#sec-listas}
+
+## Antes de preparar cualquier comunicación
+
+- [ ] ¿Quién es el auditorio y qué sabe ya?
+- [ ] ¿Qué quiero que piense o haga al terminar?
+- [ ] ¿Cuál es mi mensaje principal en una frase?
+- [ ] ¿Tengo ethos, pathos y logos?
+- [ ] ¿Cuál es el contexto (kairós): tiempo, formato, momento?
+
+## El argumento
+
+- [ ] Afirmación clara, con su cualificador.
+- [ ] Datos suficientes y pertinentes.
+- [ ] Garantía explícita: por qué los datos apoyan la afirmación.
+- [ ] Las objeciones más fuertes, con respuesta.
+- [ ] Ninguna falacia de las del capítulo 2.
+
+## Las diapositivas
+
+- [ ] Una idea por diapositiva, con título afirmación.
+- [ ] Evidencia visual en lugar de viñetas.
+- [ ] Texto legible desde la última fila (mínimo 24 puntos).
+- [ ] Contraste suficiente y nada que dependa solo del color.
+- [ ] Unas diapositivas por minuto como máximo.
+- [ ] La última diapositiva muestra el mensaje principal.
+
+## El ensayo
+
+- [ ] Ensayado en voz alta al menos tres veces, una ante otras personas.
+- [ ] Duración comprobada con cronómetro, con margen del 10 %.
+- [ ] Transiciones entre bloques preparadas.
+- [ ] Las tres preguntas más probables, con respuesta.
+
+## El día de la charla
+
+- [ ] Llegar con tiempo; probar proyector, micrófono y mando.
+- [ ] Copia de la presentación en PDF y en otro dispositivo.
+- [ ] Agua a mano.
+- [ ] Un minuto de respiración lenta antes de empezar.

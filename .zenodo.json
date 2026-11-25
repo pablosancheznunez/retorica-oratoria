@@ -1,0 +1,32 @@
+{
+  "title": "Retórica y oratoria para la investigación",
+  "upload_type": "publication",
+  "publication_type": "book",
+  "description": "<p>Libro abierto e interactivo para doctorandos y personal investigador sobre retórica y oratoria aplicadas a la ciencia: la retórica clásica hoy, la argumentación y las falacias, la persuasión con evidencia y relatos, el diseño de presentaciones, la voz y la ansiedad al hablar en público, y la comunicación con públicos no especialistas. Incluye laboratorios interactivos, actividades de corrección inmediata, autoevaluación y retos.</p>",
+  "creators": [
+    {
+      "name": "Sánchez-Núñez, Pablo",
+      "affiliation": "Universidad Carlos III de Madrid",
+      "orcid": "0000-0001-7845-9506"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "language": "spa",
+  "access_right": "open",
+  "keywords": [
+    "retórica",
+    "oratoria",
+    "argumentación",
+    "comunicación científica",
+    "presentaciones",
+    "hablar en público",
+    "divulgación"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://pablosancheznunez.com/retorica-oratoria/",
+      "relation": "isAlternateIdentifier",
+      "scheme": "url"
+    }
+  ]
+}

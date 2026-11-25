@@ -1,0 +1,160 @@
+---
+engine: markdown
+---
+
+# Capítulo 1. La retórica clásica hoy {#sec-cap1}
+
+::: {.callout-note appearance="default"}
+## Objetivos
+- Reconocer los tres modos de persuasión (ethos, pathos y logos) en textos y charlas científicas.
+- Usar los cinco cánones de la retórica para planificar cualquier comunicación.
+- Entender que la ciencia también es retórica, y por qué eso no le resta rigor.
+:::
+
+::: {.callout-note appearance="simple" icon="false"}
+## Glosario del capítulo
+[Retórica](92-glosario.qmd#gl-retorica) · [Ethos](92-glosario.qmd#gl-ethos) · [Pathos](92-glosario.qmd#gl-pathos) · [Logos](92-glosario.qmd#gl-logos) · [Kairós](92-glosario.qmd#gl-kairos) · [Cánones de la retórica](92-glosario.qmd#gl-canones) · [Auditorio](92-glosario.qmd#gl-auditorio)
+:::
+
+::: {.callout-tip appearance="simple" icon="false"}
+## Descargas
+[Plantilla de entrega del reto (.qmd)](plantillas/entrega_reto.qmd){.btn .btn-outline-primary .btn-sm download="entrega_reto.qmd"}
+[Tema de estilo (.scss)](plantillas/informe.scss){.btn .btn-outline-primary .btn-sm download="informe.scss"}
+:::
+
+## Lectura obligatoria
+
+::: {.lectura}
+Fahnestock, J. (1986). [Accommodating science: The rhetorical life of scientific facts](https://doi.org/10.1177/0741088386003003001). *Written Communication*, 3(3), 275-296.
+:::
+
+## 1. Qué es la retórica
+
+Aristóteles definió la retórica como la facultad de **ver, en cada caso, los medios de persuasión disponibles**. No es adorno ni engaño: es el estudio de cómo un discurso consigue que un **auditorio** concreto acepte una afirmación. Toda comunicación científica tiene un auditorio (revisores, tribunal, colegas, público), un propósito y un contexto, así que toda comunicación científica es retórica.
+
+Fahnestock (1986) lo mostró comparando artículos científicos con sus versiones divulgativas: al «acomodar» un hallazgo para el gran público, los textos cambian de **género** (de explicar a celebrar o advertir), eliminan las matizaciones y aumentan la certeza de las afirmaciones. Saber reconocer esos desplazamientos es imprescindible para comunicar con honestidad y para leer críticamente lo que otros cuentan de tu trabajo.
+
+## 2. Los tres modos de persuasión
+
+| Modo | Se apoya en | En ciencia | Riesgo si se abusa |
+|---|---|---|---|
+| **Ethos** | La credibilidad de quien habla | Trayectoria, afiliación, transparencia, reconocer límites | Argumento de autoridad |
+| **Pathos** | Las emociones y valores del auditorio | Mostrar por qué importa, a quién afecta | Alarmismo, manipulación |
+| **Logos** | La razón: datos y argumentos | Evidencia, lógica, coherencia | Datos sin contexto que nadie entiende |
+
+Un buen discurso los combina. En ciencia se tiende a creer que basta el logos; pero un tribunal también juzga la credibilidad (ethos) y una charla sin pathos (sin un porqué) se olvida. El ethos científico, además, se construye con algo poco intuitivo: **reconocer la incertidumbre**, que aumenta la confianza en lugar de restarla.
+
+Un cuarto concepto clásico, el **kairós**, se refiere al momento oportuno: qué decir, cuándo y en qué medida según la situación.
+
+## 3. Los cinco cánones: un método para preparar cualquier comunicación
+
+| Canon | Pregunta | Para una charla de congreso |
+|---|---|---|
+| **Inventio** (invención) | ¿Qué decir? ¿Con qué argumentos y pruebas? | Elegir el mensaje principal y tres apoyos |
+| **Dispositio** (disposición) | ¿En qué orden? | Introducción, problema, hallazgo, implicaciones |
+| **Elocutio** (estilo) | ¿Con qué palabras? | Frases claras, términos definidos, ejemplos |
+| **Memoria** | ¿Cómo recordarlo? | Ensayar con la estructura, no con un guion literal |
+| **Actio** o *pronuntiatio* (presentación) | ¿Cómo decirlo? | Voz, mirada, gesto, ritmo (capítulo 5) |
+
+La disposición clásica de un discurso (exordio, narración, argumentación, refutación y peroración) sigue viva en la estructura de un artículo y en una buena defensa de tesis.
+
+## Laboratorio: ¿qué modo domina en tu texto? {#lab-c1-modos}
+
+::: {.laboratorio}
+::: {.laboratorio-etiqueta}
+Laboratorio · se ejecuta en tu navegador
+:::
+
+Pega un párrafo (un resumen, una introducción, el arranque de una charla). El laboratorio busca marcas típicas de cada modo de persuasión: cifras y conectores lógicos (logos), referencias a quien habla o a autoridades (ethos) y palabras valorativas o emocionales (pathos). Es una herramienta orientativa: la retórica no se reduce a contar palabras, pero ayuda a ver desequilibrios.
+
+```{ojs}
+//| echo: false
+area = window.Lab.area
+viewof texto_modos = area("Tu texto", {rows: 6, submit: "Analizar", value: "Cada año, miles de doctorandos abandonan su tesis antes de terminarla. En nuestro estudio con 1200 participantes de 14 universidades, encontramos que la falta de supervisión explica el 30 % del abandono; por tanto, mejorar la supervisión podría evitar cientos de abandonos dolorosos y costosos. Como investigadores con diez años de experiencia en este campo, proponemos tres medidas concretas."})
+```
+
+```{ojs}
+//| echo: false
+{
+  const t = texto_modos.toLowerCase();
+  const cuenta = re => (t.match(re) || []).length;
+  const logos = cuenta(/\d+([.,]\d+)?\s*%?|\b(por tanto|por lo tanto|porque|ya que|así que|en consecuencia|demuestra|muestra|indica|datos|resultados|evidencia|estudio|análisis|media|significativ\w*)\b/g);
+  const ethos = cuenta(/\b(nuestro|nuestra|nuestros|nosotros|como investigador\w*|experiencia|expert\w*|según|universidad\w*|grupo|equipo|publicad\w*|revisad\w*)\b/g);
+  const pathos = cuenta(/\b(miles|millones|vida|vidas|dolor\w*|grave\w*|urgente\w*|esperanza|miedo|crisis|devastador\w*|increíble|extraordinari\w*|sufr\w*|injust\w*|costos\w*|importante\w*|preocupante\w*|abandon\w*)\b/g);
+  const tot = Math.max(1, logos + ethos + pathos), pc = v => Math.round(100 * v / tot);
+  const fila = (n, v, c) => `<tr><td>${n}</td><td style="text-align:right">${v}</td><td style="width:55%"><div style="height:.8rem;border-radius:2px;background:${c};width:${pc(v)}%"></div></td></tr>`;
+  const d = html`<div role="status"></div>`;
+  d.innerHTML = `<table class="table table-sm"><thead><tr><th scope="col">Modo</th><th scope="col">Marcas</th><th scope="col"><span class="visually-hidden">Barra</span></th></tr></thead><tbody>
+   ${fila("Logos (razón, datos)", logos, "#2a78d6")}${fila("Ethos (credibilidad)", ethos, "#1baf7a")}${fila("Pathos (emoción, valores)", pathos, "#eb6834")}</tbody></table>
+   <p class="small">${logos === 0 ? "No aparecen datos ni conectores lógicos: ¿en qué se apoya la afirmación? " : ""}${pathos === 0 ? "No hay ninguna marca de por qué importa: ¿lo entenderá alguien ajeno a tu campo? " : ""}${pathos > logos ? "El pathos supera al logos: comprueba que la emoción no sustituye a la evidencia." : ""}</p>`;
+  return d;
+}
+```
+:::
+
+## Actividades
+
+::: {.clasificar #ia-c1-modos titulo="¿Qué modo de persuasión predomina?" categorias="Ethos|Pathos|Logos"}
+- «Tras quince años dirigiendo este laboratorio, puedo decir que…» → Ethos
+- «La diferencia fue de 3,2 puntos (IC 95 %: 1,1 a 5,3) en 400 participantes» → Logos
+- «Detrás de cada cifra hay una familia que espera un diagnóstico» → Pathos
+- «Reconocemos que nuestro diseño no permite descartar la confusión por edad» → Ethos // Reconocer los límites aumenta la credibilidad.
+- «Si A causa B y B causa C, entonces reducir A debería reducir C» → Logos
+- «Imaginen que mañana su hija no pudiera leer» → Pathos
+:::
+
+::: {.ordenar #ia-c1-canones titulo="Ordena los cinco cánones de la retórica"}
+1. Inventio: encontrar qué decir
+2. Dispositio: ordenarlo
+3. Elocutio: elegir las palabras
+4. Memoria: retenerlo
+5. Actio: presentarlo con la voz y el cuerpo
+:::
+
+::: {.clasificar #ia-c1-fahnestock titulo="Al pasar del artículo a la noticia, ¿qué suele ocurrir? (Fahnestock, 1986)" categorias="Suele ocurrir|No suele ocurrir"}
+- Desaparecen las matizaciones («podría», «sugiere») → Suele ocurrir
+- La afirmación gana certeza → Suele ocurrir
+- Se añaden los intervalos de confianza → No suele ocurrir
+- Se subraya lo asombroso o lo útil del hallazgo → Suele ocurrir
+- Se describen con más detalle los métodos → No suele ocurrir
+:::
+
+## Reto evaluable {#reto-c1}
+
+::: {.callout-important appearance="simple" icon="false"}
+## Reto del capítulo 1 · Del artículo a la noticia
+1. Elige un artículo de tu campo que haya tenido cobertura en prensa y localiza dos noticias sobre él.
+2. Compara las afirmaciones principales: ¿qué matizaciones desaparecen? ¿Cambia la certeza o el género (explicar, celebrar, alarmar)?
+3. Analiza ethos, pathos y logos en el resumen del artículo y en una de las noticias.
+4. Redacta una nota de prensa de 250 palabras sobre el artículo que sea atractiva **y** fiel.
+
+**Entrega:** con la [plantilla de entrega](plantillas/entrega_reto.qmd). Este reto **no tiene solución en el libro**.
+:::
+
+## Autoevaluación
+
+Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la nota.
+
+::: {.webex-check .webex-box}
+1. Para Aristóteles, la retórica es la facultad de ver en cada caso los medios de persuasión disponibles. {{< torf true >}}
+2. La credibilidad de quien habla corresponde al {{< mcq "logos" "*ethos" "pathos" "kairós" >}}
+3. El momento oportuno para decir algo es el {{< fitb "kairós" "kairos" ignorecase=true >}}
+4. Reconocer las limitaciones de un estudio siempre debilita la credibilidad. {{< torf false >}}
+5. Ordenar las partes de un discurso corresponde a la {{< mcq "inventio" "*dispositio" "elocutio" "actio" >}}
+6. Según Fahnestock (1986), al divulgar un hallazgo las afirmaciones tienden a ganar {{< fitb "certeza" ignorecase=true >}}
+7. La comunicación científica rigurosa no necesita retórica. {{< torf false >}}
+8. ¿Qué peligro tiene abusar del pathos?
+
+{{< longmcq "Que el texto sea demasiado técnico" "*Que la emoción sustituya a la evidencia y se caiga en el alarmismo o la manipulación" "Que se pierda credibilidad por citar demasiado" >}}
+:::
+
+::: {.webex-solution boton="Ver explicaciones"}
+- *Retórica*, libro I.
+- Ethos: carácter y credibilidad.
+- Καιρός.
+- Al contrario: suele aumentarla.
+- Disposición u orden.
+- Y pierden matices.
+- Toda comunicación se dirige a un auditorio.
+- La emoción debe ayudar a comprender, no reemplazar las pruebas.
+:::

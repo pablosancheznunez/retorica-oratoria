@@ -1,0 +1,167 @@
+---
+engine: markdown
+---
+
+# Capítulo 3. Persuadir con evidencia y relatos {#sec-cap3}
+
+::: {.callout-note appearance="default"}
+## Objetivos
+- Entender cómo cambian las actitudes según el modelo de probabilidad de elaboración.
+- Usar estructuras narrativas (como «Y, pero, por tanto») para dar sentido a los datos.
+- Distinguir la narrativa que ayuda a comprender de la que distorsiona.
+:::
+
+::: {.callout-note appearance="simple" icon="false"}
+## Glosario del capítulo
+[Modelo de probabilidad de elaboración](92-glosario.qmd#gl-elm) · [Ruta central y periférica](92-glosario.qmd#gl-rutas) · [Narrativa](92-glosario.qmd#gl-narrativa) · [Estructura ABT](92-glosario.qmd#gl-abt) · [Encuadre](92-glosario.qmd#gl-encuadre)
+:::
+
+::: {.callout-tip appearance="simple" icon="false"}
+## Descargas
+[Plantilla de entrega del reto (.qmd)](plantillas/entrega_reto.qmd){.btn .btn-outline-primary .btn-sm download="entrega_reto.qmd"}
+[Tema de estilo (.scss)](plantillas/informe.scss){.btn .btn-outline-primary .btn-sm download="informe.scss"}
+:::
+
+## Lectura obligatoria
+
+::: {.lectura}
+Dahlstrom, M. F. (2014). [Using narratives and storytelling to communicate science with nonexpert audiences](https://doi.org/10.1073/pnas.1320645111). *PNAS*, 111(supl. 4), 13614-13620.
+:::
+
+### Lecturas complementarias {.unnumbered}
+
+- Petty, R. E.; Cacioppo, J. T. (1986). [The elaboration likelihood model of persuasion](https://doi.org/10.1016/S0065-2601(08)60214-2). *Advances in Experimental Social Psychology*, 19, 123-205.
+
+## 1. Dos rutas hacia el cambio de actitud
+
+El **modelo de probabilidad de elaboración** (Petty y Cacioppo, 1986) distingue dos rutas:
+
+- **Ruta central**: la persona está motivada y es capaz de pensar en el mensaje; evalúa la calidad de los argumentos. Los cambios por esta ruta son **más duraderos** y resistentes.
+- **Ruta periférica**: la persona no puede o no quiere elaborar; responde a señales superficiales (prestigio de la fuente, número de argumentos, atractivo, consenso aparente). Los cambios son más frágiles.
+
+Para un tribunal o un panel de revisión, la ruta central domina: importan los argumentos. Para una audiencia general, cansada o con poco tiempo, pesan más las señales periféricas. Una buena comunicación facilita la ruta central: reduce la carga, explica el porqué y da motivos para prestar atención.
+
+## 2. Por qué funcionan los relatos
+
+Dahlstrom (2014) resume la investigación sobre narrativa en comunicación científica: frente a los textos expositivos, las narraciones se **comprenden** más fácilmente, se **recuerdan** mejor y resultan más **atractivas** para el público no especialista. Una narrativa tiene personajes, una secuencia causal y un desenlace; transforma datos aislados en una historia con sentido.
+
+Plantea también tres preguntas éticas que conviene hacerse antes de usarla:
+
+1. **¿Para qué?** ¿Para ayudar a comprender o para persuadir de una postura?
+2. **¿Representa bien la evidencia?** Un caso individual puede ser poco representativo.
+3. **¿Es la narrativa adecuada para este público y este tema?**
+
+## 3. «Y, pero, por tanto»: la estructura ABT
+
+Randy Olson propuso una plantilla mínima para dar forma narrativa a cualquier mensaje científico:
+
+> **Y** (*And*) — el contexto que el público reconoce, **PERO** (*But*) — el problema o la tensión, **POR TANTO** (*Therefore*) — lo que se hizo o se propone.
+
+Frente a la estructura «Y, y, y» (una lista de hechos sin tensión) o «Pero, pero, pero» (una sucesión de problemas sin salida), ABT crea una pregunta y la responde. Funciona igual en el primer párrafo de un resumen, en el arranque de una charla o en una propuesta de proyecto.
+
+## Laboratorio: tu mensaje en ABT {#lab-c3-abt}
+
+::: {.laboratorio}
+::: {.laboratorio-etiqueta}
+Laboratorio · se ejecuta en tu navegador
+:::
+
+Escribe las tres partes de tu mensaje. El laboratorio las une, cuenta las palabras (lo ideal es que quepa en unas 50) y señala problemas típicos.
+
+```{ojs}
+//| echo: false
+texto = window.Lab.texto
+viewof abt = {
+  const c = html`<div></div>`, campos = [["y", "Y… (contexto conocido)", "Cada año miles de doctorandos empiezan su tesis con ilusión"],
+    ["pero", "PERO… (el problema)", "casi un tercio la abandona antes de terminar, y no sabemos bien por qué"],
+    ["portanto", "POR TANTO… (lo que hiciste o propones)", "seguimos a 1200 doctorandos durante cinco años para identificar qué apoyos marcan la diferencia"]];
+  const ins = campos.map(([k, et, v]) => { const t = texto(et, {value: v}); t.addEventListener("input", e => { e.stopPropagation(); c.value = leer(); c.dispatchEvent(new Event("input", {bubbles: true})); }); c.append(t); return [k, t]; });
+  const leer = () => Object.fromEntries(ins.map(([k, t]) => [k, t.value.trim()]));
+  c.value = leer(); return c;
+}
+```
+
+```{ojs}
+//| echo: false
+{
+  const frase = `${abt.y}, pero ${abt.pero}; por tanto, ${abt.portanto}.`.replace(/\s+/g, " ");
+  const n = frase.split(/\s+/).filter(Boolean).length;
+  const avisos = [];
+  if (!abt.pero) avisos.push("Falta el PERO: sin tensión no hay historia, solo una lista (estructura «Y, y, y»).");
+  if (/\b(y|además)\b/i.test(abt.pero) && abt.pero.split(/\s+/).length < 5) avisos.push("El PERO parece otro «y»: plantea un problema, un vacío o una contradicción.");
+  if (n > 70) avisos.push(`Tiene ${n} palabras: intenta dejarlo en unas 50.`);
+  if (/\b(\w+ción|\w+miento)\b.*\b(\w+ción|\w+miento)\b.*\b(\w+ción|\w+miento)\b/i.test(frase)) avisos.push("Muchos sustantivos abstractos (-ción, -miento): prueba con verbos.");
+  const d = html`<div role="status"></div>`;
+  d.innerHTML = `<blockquote class="lab-cita" style="border-left:4px solid #2a78d6;padding-left:.8rem">${frase.replace(/</g, "&lt;")}</blockquote>
+   <p>${n} palabras. ${avisos.length ? "" : '<span class="lab-bien" style="font-weight:600">Buena estructura.</span>'}</p>${avisos.map(a => `<p class="lab-medio small" style="font-weight:600">${a}</p>`).join("")}`;
+  return d;
+}
+```
+:::
+
+## 4. Encuadre: el mismo dato, distinto significado
+
+El **encuadre** (*framing*) es la forma de presentar una información que activa unas interpretaciones y no otras. «El tratamiento tiene un 90 % de supervivencia» y «el tratamiento tiene un 10 % de mortalidad» son equivalentes, pero no se perciben igual. En comunicación científica, el encuadre honesto implica mostrar las cifras en más de una forma (absolutas y relativas, ganancias y pérdidas) y no elegir solo la que favorece la conclusión deseada.
+
+## Actividades
+
+::: {.clasificar #ia-c3-rutas titulo="¿Ruta central o periférica?" categorias="Ruta central|Ruta periférica"}
+- El panel evalúa la solidez del diseño experimental de la propuesta → Ruta central
+- Un lector se convence porque el artículo está en una revista prestigiosa → Ruta periférica
+- Un oyente se fija en que la ponente habla con mucha seguridad → Ruta periférica
+- Una revisora comprueba si las conclusiones se siguen de los resultados → Ruta central
+- Un público se deja llevar por la cantidad de diapositivas con datos → Ruta periférica // Número de argumentos, no su calidad.
+:::
+
+::: {.clasificar #ia-c3-abt titulo="¿Qué estructura tiene?" categorias="Y, pero, por tanto|Y, y, y|Pero, pero, pero"}
+- «Las abejas polinizan un tercio de los cultivos, pero sus poblaciones caen; por tanto, estudiamos qué pesticidas las afectan más» → Y, pero, por tanto
+- «Nuestro grupo estudia las abejas, y usa sensores, y además tiene colaboraciones internacionales» → Y, y, y
+- «Las abejas disminuyen, pero los datos son escasos, pero además los modelos fallan, pero no hay financiación» → Pero, pero, pero
+:::
+
+::: {.clasificar #ia-c3-etica titulo="¿Uso responsable de la narrativa? (Dahlstrom, 2014)" categorias="Responsable|Problemático"}
+- Contar la historia de una paciente típica del ensayo, con su permiso, y dar después los datos de todos → Responsable
+- Elegir el único caso espectacular para sugerir que el tratamiento siempre funciona → Problemático // Caso no representativo.
+- Explicar un método de laboratorio como un relato de detectives para estudiantes de secundaria → Responsable
+- Inventar un testimonio para una nota de prensa → Problemático
+:::
+
+## Reto evaluable {#reto-c3}
+
+::: {.callout-important appearance="simple" icon="false"}
+## Reto del capítulo 3 · Tres versiones de tu investigación
+1. Escribe tu investigación en **ABT** en una frase de unas 50 palabras.
+2. Escribe una versión **narrativa** de 300 palabras para un público general, con un personaje y un desenlace, y justifica que es fiel a la evidencia.
+3. Escribe una versión **expositiva** de 300 palabras para especialistas.
+4. Pide a tres personas de fuera de tu campo que lean las dos versiones y anota qué recuerdan al día siguiente.
+
+**Entrega:** con la [plantilla de entrega](plantillas/entrega_reto.qmd). Este reto **no tiene solución en el libro**.
+:::
+
+## Autoevaluación
+
+Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la nota.
+
+::: {.webex-check .webex-box}
+1. Según el modelo de probabilidad de elaboración, los cambios por la ruta central son más duraderos. {{< torf true >}}
+2. Fiarse de un argumento por el prestigio de quien lo dice es un ejemplo de ruta {{< mcq "central" "*periférica" >}}
+3. Según Dahlstrom (2014), las narraciones se recuerdan mejor que los textos expositivos. {{< torf true >}}
+4. En la estructura ABT, la letra B corresponde a {{< fitb "pero" "but" ignorecase=true >}}
+5. Una lista de hechos sin tensión tiene la estructura {{< mcq "Y, pero, por tanto" "*Y, y, y" "Pero, pero, pero" >}}
+6. Presentar «90 % de supervivencia» en lugar de «10 % de mortalidad» es un ejemplo de {{< fitb "encuadre" "framing" ignorecase=true >}}
+7. Usar un caso individual espectacular siempre es una buena forma de representar la evidencia. {{< torf false >}}
+8. ¿Qué tres preguntas éticas propone Dahlstrom antes de usar una narrativa?
+
+{{< longmcq "Coste, duración y formato" "*Para qué se usa, si representa bien la evidencia y si es adecuada para ese público y tema" "Si es original, si es divertida y si es breve" >}}
+:::
+
+::: {.webex-solution boton="Ver explicaciones"}
+- Se basan en la elaboración de argumentos.
+- Señal periférica: la fuente.
+- Comprensión, recuerdo e interés.
+- *And, But, Therefore*.
+- Sin tensión, no hay historia.
+- *Framing*.
+- Puede ser poco representativo.
+- Propósito, representatividad y adecuación.
+:::

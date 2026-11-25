@@ -1,0 +1,41 @@
+---
+engine: markdown
+---
+
+# Guía para el profesorado {#sec-guia}
+
+El libro sirve como manual de un taller de doctorado de unas 20-24 horas (seis sesiones) sobre comunicación oral y escrita de la investigación, o como lectura autónoma. Cada capítulo combina una lectura obligatoria, práctica individual y un reto que se presenta en la sesión siguiente.
+
+## Propuesta de evaluación
+
+| Actividad | Peso orientativo |
+|---|---|
+| Tesis en tres minutos (reto 5), presentada en directo | 30 % |
+| Otros retos evaluables (elegir 3 de 5) | 45 % |
+| Retroalimentación por pares a las charlas de los compañeros | 15 % |
+| Autoevaluaciones y participación | 10 % |
+
+La rúbrica común valora la estructura y el argumento (25 %), el uso de la evidencia (20 %), la adaptación al público (20 %), la expresión oral o escrita (25 %) y la reflexión y la mejora entre versiones (10 %).
+
+## Actividades interactivas y laboratorios
+
+Laboratorios sin programar: análisis de ethos, pathos y logos de un texto, constructor de argumentos de Toulmin, mensaje en estructura ABT, medidor de guiones (duración, frases largas y legibilidad de Fernández Huerta) y cronómetro de ensayo. Escenarios de decisión: pregunta difícil en un congreso. En el PDF y el EPUB, las actividades aparecen en papel con su solución.
+
+## Sesiones de práctica oral
+
+Se recomienda grabar las charlas (con consentimiento) y usar la retroalimentación en dos pasos: primero lo que funcionó, después una o dos mejoras concretas. La ansiedad al hablar en público es frecuente: conviene normalizarla, practicar en grupos pequeños antes que ante toda la clase y conocer los servicios de apoyo psicológico de la universidad.
+
+## Autoevaluación en Aula Global y diapositivas
+
+Las preguntas están exportadas a **Moodle XML** en `moodle/`. Las diapositivas de cada capítulo están en [diapositivas/](diapositivas/index.html){target="_blank"}.
+
+## Mantenimiento
+
+```bash
+python3 herramientas/preparar.py
+python3 herramientas/moodle.py
+python3 herramientas/figuras.py
+python3 herramientas/pdf.py
+quarto render
+python3 herramientas/diapositivas.py
+```

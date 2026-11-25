@@ -1,0 +1,151 @@
+---
+engine: markdown
+---
+
+# Capítulo 6. Preguntas, debates y públicos {#sec-cap6}
+
+::: {.callout-note appearance="default"}
+## Objetivos
+- Responder preguntas difíciles con honestidad y control.
+- Participar en debates académicos y en mesas redondas con argumentos y respeto.
+- Comunicar la ciencia a públicos no especialistas y a los medios, partiendo de lo que la gente necesita saber.
+:::
+
+::: {.callout-note appearance="simple" icon="false"}
+## Glosario del capítulo
+[Turno de preguntas](92-glosario.qmd#gl-preguntas) · [Modelo de déficit](92-glosario.qmd#gl-deficit) · [Comunicación bidireccional](92-glosario.qmd#gl-bidireccional) · [Mensaje clave](92-glosario.qmd#gl-mensajeclave) · [Incertidumbre comunicada](92-glosario.qmd#gl-incertidumbre)
+:::
+
+::: {.callout-tip appearance="simple" icon="false"}
+## Descargas
+[Plantilla de entrega del reto (.qmd)](plantillas/entrega_reto.qmd){.btn .btn-outline-primary .btn-sm download="entrega_reto.qmd"}
+[Tema de estilo (.scss)](plantillas/informe.scss){.btn .btn-outline-primary .btn-sm download="informe.scss"}
+:::
+
+## Lectura obligatoria
+
+::: {.lectura}
+Fischhoff, B. (2013). [The sciences of science communication](https://doi.org/10.1073/pnas.1213273110). *PNAS*, 110(supl. 3), 14033-14039.
+:::
+
+### Lecturas complementarias {.unnumbered}
+
+- Nisbet, M. C.; Scheufele, D. A. (2009). [What's next for science communication? Promising directions and lingering distractions](https://doi.org/10.3732/ajb.0900041). *American Journal of Botany*, 96(10), 1767-1778.
+
+## 1. El turno de preguntas
+
+Muchas charlas se ganan o se pierden en las preguntas. Un método sencillo:
+
+1. **Escucha** la pregunta entera, sin preparar la respuesta mientras la oyes.
+2. **Agradece** o reconoce el punto, sin adular («Es una buena cuestión metodológica»).
+3. **Reformula** si la sala no la ha oído o si es larga: confirmas que la has entendido.
+4. **Responde** con el mensaje principal: corto, directo, con un dato si lo tienes.
+5. **Cierra**: «¿Responde a tu pregunta?» o vuelve al mensaje de la charla.
+
+Ante una pregunta que no sabes responder, lo honesto es decirlo y ofrecer cómo averiguarlo («No lo he analizado; sería interesante comprobarlo con…»). Ante una pregunta hostil, responde al **contenido**, no al tono.
+
+## 2. Debatir
+
+En un debate académico o una mesa redonda:
+
+- Representa la postura contraria **en su mejor versión** antes de criticarla (lo contrario del hombre de paja, capítulo 2).
+- Separa los **hechos** de los **valores**: muchos desacuerdos no son sobre datos, sino sobre qué importa más.
+- Concede lo que sea razonable: refuerza tu ethos.
+- Ten preparadas dos o tres ideas principales y vuelve a ellas.
+
+## 3. Comunicar con públicos no especialistas
+
+Fischhoff (2013) defiende que la comunicación científica también debe basarse en la ciencia: **estudiar qué necesita saber el público** para tomar sus decisiones, en lugar de suponerlo. Propone cuatro pasos: identificar la información relevante para las decisiones de la gente, averiguar qué saben ya (y qué creen erróneamente), diseñar mensajes que cubran esa distancia y **comprobar** que funcionan.
+
+Nisbet y Scheufele (2009) critican el **modelo de déficit**, la idea de que el público desconfía o discrepa por falta de información y que basta con darle más datos. La evidencia muestra que los valores, la identidad y la confianza pesan tanto como el conocimiento. Proponen modelos de **diálogo y participación**, en los que la comunicación es bidireccional.
+
+| Ante | Haz | Evita |
+|---|---|---|
+| Un público general | Empezar por por qué importa; ejemplos cotidianos; una idea central | Jerga, siglas, tablas |
+| Un periodista | Tres mensajes clave preparados; cifras redondeadas con su contexto; revisar la incertidumbre | Hablar «fuera de micrófono»; especular fuera de tu campo |
+| Responsables políticos | Opciones con sus costes y su evidencia; brevedad | Recomendaciones que tus datos no sostienen |
+| Redes sociales | Enlazar a la fuente; hilos claros; responder con respeto | Exagerar para ganar alcance |
+
+**Comunicar la incertidumbre** no resta confianza si se hace bien: di qué se sabe, qué no y qué cambiaría la conclusión.
+
+## Actividades
+
+::: {.escenario #ia-c6-pregunta titulo="Una pregunta difícil en el congreso"}
+Al terminar tu charla, un catedrático conocido dice: «Con una muestra de 40 personas, sus conclusiones no valen nada».
+
+### La pregunta {#c6e-inicio}
+¿Cómo empiezas?
+
+- [«Con todo respeto, creo que no ha entendido el estudio»](#c6e-defensa)
+- [«Tiene razón en que 40 es una muestra pequeña; déjeme explicar qué podemos concluir con ella y qué no»](#c6e-concede)
+
+### A la defensiva {#c6e-defensa .final .mal}
+Respondes al tono, no al contenido, y pierdes credibilidad ante la sala, aunque tuvieras argumentos.
+
+### Concesión razonable {#c6e-concede}
+Reconoces el punto. ¿Qué añades?
+
+- [El intervalo de confianza del efecto y que el estudio es exploratorio, con una replicación preregistrada en marcha](#c6e-bien)
+- [Que otros estudios publicados en revistas importantes también usan 40 personas](#c6e-autoridad)
+
+### Apelación a la costumbre {#c6e-autoridad .final .regular}
+Que otros lo hagan no justifica la inferencia. Mejor mostrar la precisión de tu estimación.
+
+### Respuesta sólida {#c6e-bien .final .bien}
+Conviertes una crítica en una muestra de rigor: concedes, cuantificas la incertidumbre y explicas el siguiente paso. Tu ethos sale reforzado.
+:::
+
+::: {.clasificar #ia-c6-modelo titulo="¿Modelo de déficit o de diálogo?" categorias="Modelo de déficit|Modelo de diálogo"}
+- «Si la gente tuviera más información científica, aceptaría las vacunas» → Modelo de déficit
+- Organizar foros en los que los vecinos plantean sus preocupaciones sobre un proyecto → Modelo de diálogo
+- Diseñar un folleto tras entrevistar a pacientes sobre qué dudas tienen → Modelo de diálogo // El enfoque de Fischhoff.
+- Responder a una controversia publicando más datos técnicos sin escuchar las objeciones → Modelo de déficit
+:::
+
+::: {.ordenar #ia-c6-preguntas titulo="Ordena la respuesta a una pregunta del público"}
+1. Escuchar la pregunta entera
+2. Reconocer el punto
+3. Reformularla si hace falta
+4. Responder de forma breve y directa
+5. Comprobar que responde y volver al mensaje
+:::
+
+## Reto evaluable {#reto-c6}
+
+::: {.callout-important appearance="simple" icon="false"}
+## Reto del capítulo 6 · Tu investigación fuera de la academia
+1. Identifica un **público no especialista** al que afecte tu investigación y, siguiendo a Fischhoff (2013), entrevista a dos personas de ese público: ¿qué saben, qué creen y qué les importa?
+2. Prepara **tres mensajes clave** y una explicación de la incertidumbre en lenguaje llano.
+3. Elige un formato (artículo divulgativo de 700 palabras, hilo, pódcast de 5 minutos, nota para responsables políticos) y produce la pieza.
+4. Simula una entrevista con un compañero que haga de periodista y anota qué preguntas te costaron.
+
+**Entrega:** con la [plantilla de entrega](plantillas/entrega_reto.qmd). Este reto **no tiene solución en el libro**.
+:::
+
+## Autoevaluación
+
+Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la nota.
+
+::: {.webex-check .webex-box}
+1. Ante una pregunta que no sabes responder, lo más honesto es reconocerlo y ofrecer cómo averiguarlo. {{< torf true >}}
+2. La idea de que el público discrepa solo por falta de información es el modelo de {{< fitb "déficit" "deficit" ignorecase=true >}}
+3. Según Fischhoff (2013), la comunicación científica debe {{< mcq "basarse en la intuición del investigador" "*estudiar empíricamente qué necesita saber el público y comprobar si los mensajes funcionan" "limitarse a publicar más datos" >}}
+4. Representar la postura contraria en su mejor versión antes de criticarla refuerza el debate. {{< torf true >}}
+5. Comunicar la incertidumbre siempre hace que el público confíe menos. {{< torf false >}}
+6. Ante un periodista conviene llevar preparados unos tres mensajes {{< fitb "clave" ignorecase=true >}}
+7. Ante una pregunta hostil, hay que responder {{< mcq "al tono" "*al contenido" "con otra pregunta" >}}
+8. ¿Qué aportan los modelos de diálogo frente al de déficit?
+
+{{< longmcq "Más datos técnicos" "*Reconocen que los valores, la identidad y la confianza importan y que la comunicación debe ser bidireccional" "Menos participación del público" >}}
+:::
+
+::: {.webex-solution boton="Ver explicaciones"}
+- Refuerza el ethos.
+- *Deficit model*.
+- *The sciences of science communication*.
+- Lo contrario del hombre de paja.
+- Bien explicada, puede aumentarla.
+- Preparados y breves.
+- El tono no se discute.
+- Nisbet y Scheufele (2009).
+:::

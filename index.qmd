@@ -1,0 +1,29 @@
+---
+engine: markdown
+---
+
+# Presentación {.unnumbered}
+
+La ciencia no habla por sí sola. Un resultado tiene que convertirse en un argumento que convenza a una comisión, en un artículo que supere la revisión, en una charla de quince minutos en un congreso o en una explicación clara para una periodista. Eso es **retórica**: el arte de encontrar, en cada caso, los medios de persuasión disponibles. Y la **oratoria** es su versión hablada.
+
+Persuadir no es manipular. Este libro defiende una retórica **rigurosa**: argumentos que se pueden examinar, evidencia que se muestra entera, emociones que ayudan a comprender y no a engañar. Está pensado para doctorandos y personal investigador de cualquier disciplina.
+
+::: {.callout-note appearance="simple" icon="false"}
+## Cómo citar este libro
+> Sánchez-Núñez, P. (2026). *Retórica y oratoria para la investigación: argumentar, persuadir y hablar en público con rigor*. Universidad Carlos III de Madrid. Zenodo.
+
+**Autor:** Pablo Sánchez-Núñez ([ORCID 0000-0001-7845-9506](https://orcid.org/0000-0001-7845-9506)), Universidad Carlos III de Madrid. Texto bajo licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es).
+:::
+
+## Mapa del libro
+
+| Capítulo | Pregunta |
+|---|---|
+| [1. La retórica clásica hoy](01-retorica.qmd) | ¿Qué nos enseñan Aristóteles y Cicerón sobre un artículo o una charla? |
+| [2. Argumentar](02-argumentar.qmd) | ¿Cómo se construye un argumento sólido y cómo se detecta uno falaz? |
+| [3. Persuadir con evidencia y relatos](03-persuadir.qmd) | ¿Cómo cambian las opiniones y qué papel tienen las historias? |
+| [4. Diseñar presentaciones](04-presentaciones.qmd) | ¿Cómo hacer diapositivas que se entiendan y se recuerden? |
+| [5. La voz, el cuerpo y los nervios](05-oratoria.qmd) | ¿Cómo hablar en público con naturalidad y gestionar la ansiedad? |
+| [6. Preguntas, debates y públicos](06-publicos.qmd) | ¿Cómo responder, debatir y explicar la ciencia fuera de la academia? |
+
+Cada capítulo tiene objetivos, glosario, lectura obligatoria con DOI, laboratorios, actividades, un reto evaluable y una autoevaluación. El apéndice [Listas de comprobación](90-listas.qmd) reúne lo esencial para preparar una charla. Tu progreso se guarda solo en tu navegador.
