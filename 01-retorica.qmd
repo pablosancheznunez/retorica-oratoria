@@ -92,6 +92,30 @@ viewof texto_modos = area("Tu texto", {rows: 6, submit: "Analizar", value: "Cada
 ```
 :::
 
+## Caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Analizar un resumen con ethos, pathos y logos
+Resumen de ejemplo: «Cada año, miles de doctorandos abandonan su tesis (pathos: hace sentir el problema). Seguimos durante cinco años a 1200 doctorandos de catorce universidades (ethos: rigor y escala; logos: datos). La calidad de la supervisión predijo el abandono mejor que la financiación (logos). Proponemos tres medidas para los programas de doctorado (kairós: oportunas ante las reformas en curso)».
+
+Diagnóstico: equilibrio razonable. Mejora posible: añadir una cifra de impacto (por ejemplo, cuánto se reduce el riesgo) para reforzar el logos, y una mención a la colaboración con los programas para reforzar el ethos.
+:::
+
+## Ejercicios graduados
+
+**Básico.** ¿Qué apelación predomina en «Según 40 años de datos de la OCDE…»?
+
+::: {.webex-solution boton="Ver solución"}
+Logos (datos) apoyado en el ethos de la fuente (la OCDE).
+:::
+
+**Avanzado.** Analiza con ethos, pathos, logos y kairós la presentación de un artículo de tu campo y propón dos mejoras.
+
+::: {.webex-solution boton="Ver solución"}
+Identifica frases concretas de cada tipo, valora el equilibrio para el público destinatario y propone cambios que no exageren los resultados.
+:::
+
+
 ## Actividades
 
 ::: {.clasificar #ia-c1-modos titulo="¿Qué modo de persuasión predomina?" categorias="Ethos|Pathos|Logos"}

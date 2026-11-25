@@ -103,6 +103,32 @@ viewof abt = {
 
 El **encuadre** (*framing*) es la forma de presentar una información que activa unas interpretaciones y no otras. «El tratamiento tiene un 90 % de supervivencia» y «el tratamiento tiene un 10 % de mortalidad» son equivalentes, pero no se perciben igual. En comunicación científica, el encuadre honesto implica mostrar las cifras en más de una forma (absolutas y relativas, ganancias y pérdidas) y no elegir solo la que favorece la conclusión deseada.
 
+## Caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## De la lista de datos a una historia ABT
+Versión «Y, y, y»: «Medimos el sueño de los doctorandos y su ansiedad y sus notas, y encontramos varias correlaciones».
+
+Versión ABT: «Los doctorandos trabajan muchas horas **y** se espera que eso mejore sus resultados. **Pero** quienes duermen menos de seis horas rinden peor, aunque estudien más. **Por tanto**, los programas deberían proteger el descanso, no solo exigir dedicación».
+
+La segunda tiene tensión (el «pero») y consecuencia (el «por tanto»): se recuerda y motiva a actuar.
+:::
+
+## Ejercicios graduados
+
+**Básico.** Convierte en ABT: «Analizamos 300 conjuntos de datos abiertos y encontramos errores de calidad».
+
+::: {.webex-solution boton="Ver solución"}
+Ejemplo: «Los portales publican miles de conjuntos de datos abiertos y se espera que se reutilicen. Pero uno de cada tres tiene errores que impiden usarlos. Por tanto, publicar no basta: hay que cuidar la calidad».
+:::
+
+**Avanzado.** Escribe la presentación de tu investigación en estructura ABT para tres públicos: especialistas, financiadores y público general.
+
+::: {.webex-solution boton="Ver solución"}
+El esquema se mantiene; cambian el vocabulario, el «pero» que más importa a cada público y la consecuencia («por tanto») que pueden asumir.
+:::
+
+
 ## Actividades
 
 ::: {.clasificar #ia-c3-rutas titulo="¿Ruta central o periférica?" categorias="Ruta central|Ruta periférica"}

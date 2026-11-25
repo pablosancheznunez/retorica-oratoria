@@ -130,6 +130,36 @@ viewof dur = rango("Duración de la charla (minutos)", [1, 20], {step: 1, value:
 ```
 :::
 
+## Caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Preparar el ensayo de una charla de 10 minutos
+Plan de ensayo en una semana:
+
+1. **Día 1:** escribir el guion completo y medirlo (palabras, duración a 130 palabras por minuto, frases largas).
+2. **Día 2:** pasarlo a notas breves; ensayar en voz alta dos veces, cronometrando.
+3. **Día 3:** grabarse y revisar ritmo, muletillas, mirada y gestos.
+4. **Día 4:** ensayo ante dos compañeros, con las tres preguntas más probables.
+5. **Día 5:** ajustes y ensayo final en la sala, si es posible, o de pie y con el mando.
+
+Sobre los nervios: anotar los pensamientos negativos («me voy a quedar en blanco») y responderlos con evidencia («tengo notas y he ensayado tres veces»).
+:::
+
+## Ejercicios graduados
+
+**Básico.** ¿Cuántas palabras debe tener el guion de una charla de 10 minutos a 130 palabras por minuto?
+
+::: {.webex-solution boton="Ver solución"}
+Unas 1300, mejor algo menos (1100-1200) para dejar margen a pausas e imprevistos.
+:::
+
+**Avanzado.** Graba un ensayo de tres minutos, analízalo con el laboratorio del capítulo y registra tres mejoras concretas de voz y cuerpo.
+
+::: {.webex-solution boton="Ver solución"}
+Las mejoras deben ser observables (por ejemplo, «pausa de dos segundos antes del dato principal», «mirar a la cámara al decir la conclusión»), no generales («hablar mejor»).
+:::
+
+
 ## Actividades
 
 ::: {.clasificar #ia-c5-plano titulo="¿Qué plano de la ansiedad describe? (Bodie, 2010)" categorias="Fisiológico|Cognitivo|Conductual"}

@@ -117,6 +117,38 @@ Hahn y Oaksford (2007) añaden un matiz importante: muchas «falacias» son **ra
 
 Mercier y Sperber (2011) proponen que la función del razonamiento humano no es tanto llegar solos a la verdad como **producir y evaluar argumentos para convencer a otros**. Eso explica el sesgo de confirmación: somos buenos buscando argumentos para nuestra postura y malos evaluándola. Pero también explica algo esperanzador: en **grupos que discuten**, con personas que no comparten nuestra postura, el razonamiento mejora mucho. La revisión por pares, el seminario de grupo o el tribunal de tesis son aplicaciones de esta idea.
 
+## Caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Reconstruir un argumento con Toulmin
+Afirmación de un artículo: «Las universidades deberían exigir el preregistro de las tesis experimentales».
+
+| Elemento | Contenido |
+|---|---|
+| **Datos** | Los estudios preregistrados informan de más resultados nulos |
+| **Garantía** | Que se publiquen los resultados nulos reduce el sesgo de la literatura |
+| **Respaldo** | Estudios metacientíficos sobre informes registrados |
+| **Cualificador** | «En los diseños confirmatorios» |
+| **Refutación** | Salvo en investigación exploratoria, donde el preregistro limita sin beneficio claro |
+
+La reconstrucción muestra el punto débil: el argumento necesita evidencia de que el preregistro mejora la calidad **de las tesis**, no solo de los artículos.
+:::
+
+## Ejercicios graduados
+
+**Básico.** ¿Qué falacia hay en «Este método lo usa todo el mundo en mi campo, así que es correcto»?
+
+::: {.webex-solution boton="Ver solución"}
+Apelación a la popularidad (*ad populum*): que algo sea común no prueba que sea correcto.
+:::
+
+**Avanzado.** Reconstruye con el modelo de Toulmin el argumento principal de tu tesis o de un artículo que estés escribiendo.
+
+::: {.webex-solution boton="Ver solución"}
+Identifica los seis elementos, señala cuál es más débil y cómo reforzarlo (más datos, una garantía explícita, un cualificador más preciso).
+:::
+
+
 ## Actividades
 
 ::: {.clasificar #ia-c2-falacias titulo="¿Qué falacia es?" categorias="Ad hominem|Hombre de paja|Falso dilema|Post hoc|Generalización apresurada|Apelación a la ignorancia"}

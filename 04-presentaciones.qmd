@@ -65,6 +65,37 @@ Reglas que funcionan en todos los formatos:
 - Empieza por la pregunta, no por el índice.
 - Termina con el mensaje principal en pantalla, no con «¿Preguntas?» o «Gracias».
 
+## Caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Rehacer una diapositiva de resultados
+Antes: título «Resultados»; tabla de 6 × 8 con todos los coeficientes en cuerpo 14.
+
+Después:
+
+1. **Título afirmación:** «La calidad de la supervisión predice el abandono mejor que la financiación».
+2. **Evidencia visual:** gráfico de puntos con los dos efectos y sus intervalos de confianza, resaltando el principal.
+3. **Detalles** (la tabla completa) en una diapositiva de reserva o en material adicional.
+4. **Lo que se dice:** la explicación va en la voz, no en la pantalla.
+
+Prueba: si alguien solo lee el título y mira el gráfico durante cinco segundos, ¿sabe cuál es el resultado?
+:::
+
+## Ejercicios graduados
+
+**Básico.** Convierte el título «Metodología» en un título afirmación para una charla.
+
+::: {.webex-solution boton="Ver solución"}
+Ejemplo: «Seguimos a 1200 doctorandos durante cinco años con encuestas semestrales». Resume qué se hizo y por qué es sólido.
+:::
+
+**Avanzado.** Rehaz tres diapositivas de una presentación tuya con el enfoque afirmación-evidencia y compáralas antes y después.
+
+::: {.webex-solution boton="Ver solución"}
+Documenta qué principio de Kosslyn et al. (2012) aplicas en cada cambio y comprueba la legibilidad desde la última fila (tamaño mínimo de letra).
+:::
+
+
 ## Actividades
 
 ::: {.clasificar #ia-c4-titulos titulo="¿Título tema o título afirmación?" categorias="Título tema|Título afirmación"}
