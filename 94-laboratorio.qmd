@@ -75,6 +75,47 @@ El tono agresivo hace que el público se ponga del lado de quien pregunta, aunqu
 El público nota que evitas la pregunta, y eso daña tu credibilidad más que la limitación. Responde directamente en menos de un minuto.
 :::
 
+## Laboratorio: la estructura de tu charla {#lab-estructura}
+
+::: {.laboratorio}
+::: {.laboratorio-etiqueta}
+Laboratorio · se ejecuta en tu navegador
+:::
+
+Nancy Duarte describe las grandes charlas como un ir y venir entre **lo que es** (la situación actual) y **lo que podría ser** (el futuro que propones), que termina en una **llamada a la acción** y una **nueva normalidad**. Escribe los momentos de tu charla, uno por línea, empezando por `ES:` o `PODRÍA:`, y mira su perfil.
+
+```{ojs}
+//| echo: false
+areaS = window.Lab.area
+viewof momentos = areaS("Momentos de tu charla", {rows: 8, value: "ES: Cada año se pierden miles de horas buscando datos que ya existen\nPODRÍA: Imagina encontrarlos en un minuto\nES: Hoy están en PDF, sin licencia ni identificador\nPODRÍA: Con datos abiertos y FAIR, cualquiera los reutiliza\nES: Muchos equipos creen que publicar datos es caro\nPODRÍA: Publicar en un repositorio cuesta una tarde\nACCIÓN: Deposita tu próximo conjunto de datos en Zenodo\nNUEVA: Un grupo que comparte por defecto"})
+```
+
+```{ojs}
+//| echo: false
+{
+  const ls = momentos.split("\n").map((l) => l.trim()).filter(Boolean);
+  const tipo = (l) => /^ES:/i.test(l) ? "es" : /^PODR[IÍ]A:/i.test(l) ? "podria" : /^ACCI[OÓ]N:/i.test(l) ? "accion" : /^NUEVA:/i.test(l) ? "nueva" : "otro";
+  const pts = ls.map((l) => ({t: tipo(l), txt: l.replace(/^[^:]+:\s*/, "")}));
+  const W = 560, H = 230, n = Math.max(pts.length, 2), x = (i) => 30 + i * (W - 60) / (n - 1), y = {es: 160, podria: 70, accion: 40, nueva: 100, otro: 115};
+  const color = {es: "#52514e", podria: "#2a78d6", accion: "#b3261e", nueva: "#1c6b3a", otro: "#8a8a8a"};
+  const esc = (s) => s.replace(/[&<>]/g, (c) => ({"&": "&amp;", "<": "&lt;", ">": "&gt;"}[c]));
+  let s = `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:600px" role="img" aria-label="Perfil de la charla con ${pts.length} momentos" font-family="inherit"><line x1="20" x2="${W - 20}" y1="${y.es}" y2="${y.es}" stroke="currentColor" stroke-opacity="0.2" stroke-dasharray="4 4"/><text x="20" y="${y.es + 16}" font-size="11" fill="currentColor">lo que es</text><line x1="20" x2="${W - 20}" y1="${y.podria}" y2="${y.podria}" stroke="currentColor" stroke-opacity="0.2" stroke-dasharray="4 4"/><text x="20" y="${y.podria - 6}" font-size="11" fill="currentColor">lo que podría ser</text>`;
+  s += `<path d="${pts.map((p, i) => `${i ? "L" : "M"}${x(i)} ${y[p.t]}`).join(" ")}" fill="none" stroke="currentColor" stroke-width="2"/>`;
+  pts.forEach((p, i) => s += `<circle cx="${x(i)}" cy="${y[p.t]}" r="8" fill="${color[p.t]}"/><text x="${x(i)}" y="${y[p.t] + 4}" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">${i + 1}</text>`);
+  s += "</svg>";
+  const cambios = pts.slice(1).filter((p, i) => (p.t === "es") !== (pts[i].t === "es")).length;
+  const avisos = [];
+  if (!pts.some((p) => p.t === "accion")) avisos.push("Falta la llamada a la acción: ¿qué quieres que haga el público al salir?");
+  if (!pts.some((p) => p.t === "nueva")) avisos.push("Falta la «nueva normalidad»: cierra describiendo cómo será el mundo si te hacen caso.");
+  if (cambios < 3) avisos.push("Hay pocos contrastes entre «lo que es» y «lo que podría ser»: el ritmo de ida y vuelta mantiene la tensión.");
+  if (pts.some((p) => p.t === "otro")) avisos.push("Algunas líneas no empiezan por ES:, PODRÍA:, ACCIÓN: o NUEVA:.");
+  const d = html`<div role="status" aria-live="polite"></div>`;
+  d.innerHTML = `${s}<ol class="small">${pts.map((p) => `<li><span style="color:${color[p.t]};font-weight:600">${{es: "Es", podria: "Podría ser", accion: "Acción", nueva: "Nueva normalidad", otro: "?"}[p.t]}</span> · ${esc(p.txt)}</li>`).join("")}</ol>${avisos.length ? `<ul>${avisos.map((a) => `<li>⚠ ${a}</li>`).join("")}</ul>` : "<p>✓ Estructura completa: contrastes, llamada a la acción y cierre.</p>"}`;
+  return d;
+}
+```
+:::
+
 ## Para ver y seguir aprendiendo
 
 Son enlaces, no vídeos incrustados: el vídeo se abre en la web de quien lo publica, así esta página no carga rastreadores de terceros. La mayoría está en inglés; activa los subtítulos si los necesitas.
