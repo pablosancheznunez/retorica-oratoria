@@ -1,0 +1,82 @@
+---
+engine: markdown
+---
+
+# Laboratorio interactivo {#sec-laboratorio}
+
+Este apéndice reúne un laboratorio y un escenario ramificado para practicar en tu navegador.
+
+## Laboratorio: títulos que afirman {#lab-titulos}
+
+::: {.laboratorio}
+::: {.laboratorio-etiqueta}
+Laboratorio · se ejecuta en tu navegador
+:::
+
+En el enfoque **afirmación-evidencia** (Alley), cada diapositiva tiene como título una frase completa que dice la conclusión, y el cuerpo muestra la evidencia visual. Escribe un título y el laboratorio lo revisa.
+
+```{ojs}
+//| echo: false
+textoR = window.Lab.texto
+viewof tituloDiapo = textoR("Título de tu diapositiva", {value: "Resultados"})
+```
+
+```{ojs}
+//| echo: false
+{
+  const t = tituloDiapo.trim(), palabras = t.split(/\s+/).filter(Boolean), n = palabras.length;
+  const generico = /^(introducción|resultados|metodología|método|métodos|conclusiones?|discusión|objetivos?|contexto|antecedentes|datos|análisis|agradecimientos)$/i.test(t.replace(/[.:]$/, ""));
+  const verbo = palabras.some((w) => { const x = w.toLowerCase().replace(/[^a-záéíóúüñ]/g, ""); return ["es", "son", "fue", "fueron", "hay", "está", "están", "puede", "pueden", "reduce", "reducen", "aumenta", "aumentan", "mejora", "mejoran", "duplica", "triplica", "multiplica", "explica", "predice", "muestra", "muestran", "demuestra", "permite", "indica", "sugiere", "supera", "crece", "cae", "disminuye", "depende", "cambia", "funciona", "falla", "afecta", "baja", "sube", "tarda", "cuesta", "necesita", "requiere", "evita", "acelera", "frena", "mantiene", "genera"].includes(x) || (x.length > 4 && /(aron|ieron|aban|ían|ará|erá|irá|arán|erán|irán)$/.test(x)); });
+  const cifra = /\d/.test(t);
+  const checks = [
+    [!generico, "No es una etiqueta genérica («Resultados», «Metodología»…)."],
+    [n >= 6, "Tiene al menos 6 palabras: es una frase, no un tema."],
+    [n <= 20, "No pasa de 20 palabras (cabe en dos líneas)."],
+    [verbo, "Contiene un verbo que afirma algo."],
+    [cifra, "Incluye una cifra o un dato concreto (recomendable, no obligatorio)."]];
+  const nota = checks.slice(0, 4).filter((c) => c[0]).length;
+  const d = html`<div role="status" aria-live="polite"></div>`;
+  d.innerHTML = `<div class="p-3 border rounded mb-2" style="aspect-ratio:16/9;max-width:480px;display:flex;flex-direction:column"><div style="font-size:1.25rem;font-weight:600;line-height:1.25">${t.replace(/[&<>]/g, "") || "(sin título)"}</div><div class="mt-auto small text-body-secondary">[evidencia visual: gráfico, imagen o esquema]</div></div>
+  <ul class="list-unstyled">${checks.map(([ok, txt], i) => `<li>${ok ? "✓" : i === 4 ? "○" : "✗"} ${txt}</li>`).join("")}</ul>
+  <p>${nota === 4 ? "Buen título-afirmación: el público sabe qué debe recordar aunque no lea nada más." : "Prueba a reescribirlo como la conclusión de la diapositiva. Por ejemplo: «La tutoría entre iguales reduce el abandono del 18 % al 9 %»."}</p>`;
+  return d;
+}
+```
+:::
+
+## Escenario: el turno de preguntas
+
+::: {.escenario #ia-lab-preguntas titulo="Una pregunta incómoda"}
+Acabas de presentar tu investigación en un congreso. En el turno de preguntas, alguien del público dice: «Con una muestra de 40 personas, ¿no es todo esto anecdótico?».
+
+### Primera reacción {#rp-inicio}
+¿Cómo empiezas tu respuesta?
+
+- [«Gracias por la pregunta: el tamaño de la muestra es una limitación importante.»](#rp-reconoce)
+- [«Bueno, si hubiera leído el artículo completo vería que no.»](#rp-defensa)
+- [«Es una pregunta interesante… (y hablas dos minutos de otra cosa)»](#rp-evita)
+
+### Reconoces {#rp-reconoce}
+Has dado validez a la pregunta. ¿Y ahora?
+
+- [Explico qué permite concluir la muestra y qué no, y cómo lo abordaré después](#rp-matiza)
+- [Pido disculpas por el estudio y digo que quizá no sirva para nada](#rp-cede)
+
+### Matizas {#rp-matiza .final .bien}
+«Con 40 personas no pretendemos estimar la prevalencia: es un estudio exploratorio que identifica tres patrones. El siguiente paso es contrastarlos con una encuesta a 600 personas.» Reconoces el límite, defiendes lo que sí aporta el estudio y das una respuesta breve. El público confía más en ti.
+
+### Cedes demasiado {#rp-cede .final .regular}
+La honestidad está bien, pero has desacreditado tu propio trabajo. Reconoce el límite y explica qué **sí** permite concluir el estudio.
+
+### A la defensiva {#rp-defensa .final .mal}
+El tono agresivo hace que el público se ponga del lado de quien pregunta, aunque la crítica tenga respuesta. Agradece, reformula la pregunta y responde al fondo.
+
+### Esquivas {#rp-evita .final .mal}
+El público nota que evitas la pregunta, y eso daña tu credibilidad más que la limitación. Responde directamente en menos de un minuto.
+:::
+
+## Para ver y seguir aprendiendo
+
+Son enlaces, no vídeos incrustados: el vídeo se abre en la web de quien lo publica, así esta página no carga rastreadores de terceros. La mayoría está en inglés; activa los subtítulos si los necesitas.
+
+- **[The secret structure of great talks](https://www.ted.com/talks/nancy_duarte_the_secret_structure_of_great_talks)** — Nancy Duarte · TEDxEast. Unos 18 minutos sobre la estructura «lo que es / lo que podría ser» de los grandes discursos, con transcripción.

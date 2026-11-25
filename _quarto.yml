@@ -47,6 +47,7 @@ book:
     - 06-publicos.qmd
   appendices:
   - 90-listas.qmd
+  - 94-laboratorio.qmd
   - 91-guia-docente.qmd
   - 92-glosario.qmd
 lang: es
