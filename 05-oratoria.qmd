@@ -47,7 +47,7 @@ Bodie, G. D. (2010). [A racing heart, rattling knees, and ruminative thoughts: D
 
 ## 3. Los nervios
 
-La **ansiedad al hablar en público** es una de las formas de ansiedad social más frecuentes. Bodie (2010) la describe en tres planos: **fisiológico** (corazón acelerado, temblor), **cognitivo** (pensamientos rumiativos, miedo a la evaluación) y **conductual** (evitar, hablar deprisa). Las intervenciones con más apoyo actúan sobre esos planos:
+La **ansiedad al hablar en público** es una de las formas de ansiedad social más frecuentes. @bodie2010 la describe en tres planos: **fisiológico** (corazón acelerado, temblor), **cognitivo** (pensamientos rumiativos, miedo a la evaluación) y **conductual** (evitar, hablar deprisa). Las intervenciones con más apoyo actúan sobre esos planos:
 
 - **Exposición gradual** y práctica repetida en situaciones de dificultad creciente.
 - **Reestructuración cognitiva**: cuestionar pensamientos como «se van a dar cuenta de que no sé» o «si me trabo, es un desastre».
@@ -145,6 +145,37 @@ Plan de ensayo en una semana:
 Sobre los nervios: anotar los pensamientos negativos («me voy a quedar en blanco») y responderlos con evidencia («tengo notas y he ensayado tres veces»).
 :::
 
+## Segundo caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Analizar la grabación de un ensayo
+Una doctoranda graba su ensayo y lo revisa con una pauta de cinco observaciones, cada una con una medida:
+
+| Observación | Dato | Medida |
+|---|---|---|
+| Velocidad | 175 palabras por minuto | Bajar a unas 140: marcar pausas en el guion |
+| Muletillas | 23 «vale» y «entonces» en 10 minutos | Sustituirlas por pausas en silencio |
+| Mirada | Mira la pantalla el 60 % del tiempo | Imprimir las notas y mirar al público al empezar cada diapositiva |
+| Manos | En los bolsillos | Dejarlas a la altura de la cintura y usarlas para enumerar |
+| Final | Termina con «y eso es todo» | Cerrar con la idea principal y una pausa |
+
+En el segundo ensayo, solo trabaja dos aspectos (velocidad y final): intentar cambiarlo todo a la vez suele empeorar la naturalidad.
+:::
+
+```{dot}
+//| label: fig-c5-ensayo
+//| fig-cap: "Ciclo de mejora: grabar, observar con una pauta, elegir dos cambios y volver a ensayar."
+//| fig-alt: "Ciclo de cuatro pasos: grabar el ensayo, observar con una pauta, elegir dos cambios y ensayar de nuevo."
+digraph {
+  bgcolor="white"; pad=0.2; rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#eef3fb", color="#1a4d8f", fontname="Helvetica", fontsize=11];
+  edge [color="#45433f", fontname="Helvetica", fontsize=10];
+  rankdir=TB;
+  g [label="Grabar el ensayo"]; o [label="Observar con pauta\n(5 aspectos)"]; e [label="Elegir dos cambios", fillcolor="#eaf6ef"]; n [label="Nuevo ensayo"];
+  g -> o -> e -> n; n -> g [style=dashed];
+}
+```
+
 ## Ejercicios graduados
 
 **Básico.** ¿Cuántas palabras debe tener el guion de una charla de 10 minutos a 130 palabras por minuto?
@@ -162,7 +193,7 @@ Las mejoras deben ser observables (por ejemplo, «pausa de dos segundos antes de
 
 ## Actividades
 
-::: {.clasificar #ia-c5-plano titulo="¿Qué plano de la ansiedad describe? (Bodie, 2010)" categorias="Fisiológico|Cognitivo|Conductual"}
+::: {.clasificar #ia-c5-plano titulo="¿Qué plano de la ansiedad describe? [@bodie2010]" categorias="Fisiológico|Cognitivo|Conductual"}
 - El corazón late muy deprisa antes de empezar → Fisiológico
 - «Seguro que me preguntan algo que no sé y quedaré en ridículo» → Cognitivo
 - Rechazar presentar en el congreso → Conductual
@@ -198,7 +229,7 @@ Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la
 ::: {.webex-check .webex-box}
 1. Una velocidad razonable en una charla técnica es de unas {{< mcq "60-80" "*120-150" "200-250" >}} palabras por minuto
 2. Sustituir las muletillas por pausas transmite más seguridad. {{< torf true >}}
-3. Según Bodie (2010), la ansiedad al hablar en público tiene componentes fisiológicos, cognitivos y {{< fitb "conductuales" ignorecase=true >}}
+3. Según @bodie2010, la ansiedad al hablar en público tiene componentes fisiológicos, cognitivos y {{< fitb "conductuales" ignorecase=true >}}
 4. Evitar hablar en público reduce la ansiedad a largo plazo. {{< torf false >}}
 5. Practicar en situaciones de dificultad creciente es la exposición {{< fitb "gradual" ignorecase=true >}}
 6. El objetivo es eliminar por completo los nervios. {{< torf false >}}

@@ -30,8 +30,8 @@ Mercier, H.; Sperber, D. (2011). [Why do humans reason? Arguments for an argumen
 
 ### Lecturas complementarias {.unnumbered}
 
-- Hahn, U.; Oaksford, M. (2007). [The rationality of informal argumentation: A Bayesian approach to reasoning fallacies](https://doi.org/10.1037/0033-295X.114.3.704). *Psychological Review*, 114(3), 704-732.
-- Toulmin, S. E. (2003). *The uses of argument* (ed. actualizada). Cambridge University Press (original de 1958).
+- @hahn2007
+- @toulmin2003 — Original de 1958.
 
 ## 1. La anatomía de un argumento: el modelo de Toulmin
 
@@ -111,11 +111,11 @@ Una **falacia** es un argumento que parece válido sin serlo. Algunas de las má
 | **Generalización apresurada** | Concluye mucho con pocos casos | «Mis tres doctorandos prefieren R: todos lo prefieren» |
 | **Apelación a la ignorancia** | Toma la falta de prueba como prueba | «No se ha demostrado que sea dañino, así que es seguro» |
 
-Hahn y Oaksford (2007) añaden un matiz importante: muchas «falacias» son **razonables según el contenido**. Apelar a la autoridad de un experto en el tema es un buen argumento probable; la pendiente resbaladiza es razonable si cada paso es probable. La pregunta no es «¿qué falacia es?», sino «¿cuánto apoyo da realmente este argumento?».
+@hahn2007 añaden un matiz importante: muchas «falacias» son **razonables según el contenido**. Apelar a la autoridad de un experto en el tema es un buen argumento probable; la pendiente resbaladiza es razonable si cada paso es probable. La pregunta no es «¿qué falacia es?», sino «¿cuánto apoyo da realmente este argumento?».
 
 ## 3. Por qué discutimos: la teoría argumentativa
 
-Mercier y Sperber (2011) proponen que la función del razonamiento humano no es tanto llegar solos a la verdad como **producir y evaluar argumentos para convencer a otros**. Eso explica el sesgo de confirmación: somos buenos buscando argumentos para nuestra postura y malos evaluándola. Pero también explica algo esperanzador: en **grupos que discuten**, con personas que no comparten nuestra postura, el razonamiento mejora mucho. La revisión por pares, el seminario de grupo o el tribunal de tesis son aplicaciones de esta idea.
+@mercier2011 proponen que la función del razonamiento humano no es tanto llegar solos a la verdad como **producir y evaluar argumentos para convencer a otros**. Eso explica el sesgo de confirmación: somos buenos buscando argumentos para nuestra postura y malos evaluándola. Pero también explica algo esperanzador: en **grupos que discuten**, con personas que no comparten nuestra postura, el razonamiento mejora mucho. La revisión por pares, el seminario de grupo o el tribunal de tesis son aplicaciones de esta idea.
 
 ## Caso práctico resuelto
 
@@ -133,6 +133,35 @@ Afirmación de un artículo: «Las universidades deberían exigir el preregistro
 
 La reconstrucción muestra el punto débil: el argumento necesita evidencia de que el preregistro mejora la calidad **de las tesis**, no solo de los artículos.
 :::
+
+## Segundo caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Detectar falacias en un debate
+En un debate sobre si la universidad debe exigir el acceso abierto a todas sus publicaciones aparecen estas intervenciones. Para cada una, el nombre de la falacia y una versión que sí argumenta:
+
+| Intervención | Falacia | Versión razonable |
+|---|---|---|
+| «Si obligamos al acceso abierto, mañana nos obligarán a publicar los datos en bruto y luego los cuadernos de laboratorio.» | **Pendiente resbaladiza** | «Antes de exigir el acceso abierto, definamos qué cubre y qué no.» |
+| «Lo defiende un profesor que nunca ha publicado en una revista de prestigio.» | ***Ad hominem*** | Discutir el argumento, no la trayectoria de quien lo da. |
+| «O publicamos todo en abierto o somos cómplices de las editoriales.» | **Falso dilema** | «Hay opciones intermedias: depósito en repositorio, acuerdos transformativos.» |
+| «Todo el mundo lo está haciendo.» | ***Ad populum*** | «Otras universidades lo han hecho y estos fueron sus resultados.» |
+
+Nombrar la falacia en un debate rara vez convence. Es más eficaz reformular el argumento de forma razonable y responder a esa versión.
+:::
+
+```{dot}
+//| label: fig-c2-falacias
+//| fig-cap: "De la falacia a una versión que se puede discutir."
+//| fig-alt: "Diagrama: una intervención falaciosa se identifica, se reformula de forma razonable y se responde a la versión reformulada."
+digraph {
+  bgcolor="white"; pad=0.2; rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#eef3fb", color="#1a4d8f", fontname="Helvetica", fontsize=11];
+  edge [color="#45433f", fontname="Helvetica", fontsize=10];
+  f [label="Intervención\nfalaz", fillcolor="#fdf0e8"]; n [label="Identificar\nel error"]; r [label="Reformular\nla mejor versión"]; s [label="Responder\na esa versión", fillcolor="#eaf6ef"];
+  f -> n -> r -> s;
+}
+```
 
 ## Ejercicios graduados
 
@@ -188,7 +217,7 @@ Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la
 1. En el modelo de Toulmin, la pieza que explica por qué los datos apoyan la afirmación es la {{< fitb "garantía" "garantia" ignorecase=true >}}
 2. Refutar una versión deformada de la postura contraria es la falacia del {{< mcq "ad hominem" "*hombre de paja" "falso dilema" >}}
 3. Apelar a la opinión de un experto en el propio tema es siempre una falacia. {{< torf false >}}
-4. Según Mercier y Sperber (2011), el razonamiento funciona mejor {{< mcq "en solitario" "*en grupos que discuten con puntos de vista distintos" "cuando todos piensan igual" >}}
+4. Según @mercier2011, el razonamiento funciona mejor {{< mcq "en solitario" "*en grupos que discuten con puntos de vista distintos" "cuando todos piensan igual" >}}
 5. «Después de esto, luego a causa de esto» describe la falacia {{< fitb "post hoc" ignorecase=true >}}
 6. El cualificador indica la fuerza con que se afirma algo. {{< torf true >}}
 7. El sesgo de confirmación encaja con la teoría argumentativa del razonamiento. {{< torf true >}}

@@ -30,7 +30,7 @@ Fischhoff, B. (2013). [The sciences of science communication](https://doi.org/10
 
 ### Lecturas complementarias {.unnumbered}
 
-- Nisbet, M. C.; Scheufele, D. A. (2009). [What's next for science communication? Promising directions and lingering distractions](https://doi.org/10.3732/ajb.0900041). *American Journal of Botany*, 96(10), 1767-1778.
+- @nisbet2009
 
 ## 1. El turno de preguntas
 
@@ -55,9 +55,9 @@ En un debate académico o una mesa redonda:
 
 ## 3. Comunicar con públicos no especialistas
 
-Fischhoff (2013) defiende que la comunicación científica también debe basarse en la ciencia: **estudiar qué necesita saber el público** para tomar sus decisiones, en lugar de suponerlo. Propone cuatro pasos: identificar la información relevante para las decisiones de la gente, averiguar qué saben ya (y qué creen erróneamente), diseñar mensajes que cubran esa distancia y **comprobar** que funcionan.
+@fischhoff2013 defiende que la comunicación científica también debe basarse en la ciencia: **estudiar qué necesita saber el público** para tomar sus decisiones, en lugar de suponerlo. Propone cuatro pasos: identificar la información relevante para las decisiones de la gente, averiguar qué saben ya (y qué creen erróneamente), diseñar mensajes que cubran esa distancia y **comprobar** que funcionan.
 
-Nisbet y Scheufele (2009) critican el **modelo de déficit**, la idea de que el público desconfía o discrepa por falta de información y que basta con darle más datos. La evidencia muestra que los valores, la identidad y la confianza pesan tanto como el conocimiento. Proponen modelos de **diálogo y participación**, en los que la comunicación es bidireccional.
+@nisbet2009 critican el **modelo de déficit**, la idea de que el público desconfía o discrepa por falta de información y que basta con darle más datos. La evidencia muestra que los valores, la identidad y la confianza pesan tanto como el conocimiento. Proponen modelos de **diálogo y participación**, en los que la comunicación es bidireccional.
 
 | Ante | Haz | Evita |
 |---|---|---|
@@ -80,6 +80,35 @@ Un diario quiere entrevistarte sobre tu estudio del abandono doctoral. Preparaci
 4. **Preguntas difíciles previstas:** «¿Entonces la culpa es de los directores?» → «No es una cuestión de culpa, sino de condiciones: los directores también necesitan formación y tiempo».
 5. **Al final**, pide revisar las citas textuales si el medio lo permite.
 :::
+
+## Segundo caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Explicar un resultado a tres niveles
+Un investigador debe explicar que un tratamiento redujo el riesgo de un efecto adverso del 4 % al 3 %. Prepara la misma idea para tres públicos, con la técnica de empezar por la conclusión:
+
+| Público | Mensaje | Qué añade o quita |
+|---|---|---|
+| Especialistas | «Reducción absoluta del riesgo de 1 punto; riesgo relativo de 0,75, con su intervalo de confianza» | Todo el detalle estadístico |
+| Profesionales de otra área | «Una de cada cuatro complicaciones se evita; hay que tratar a unas cien personas para evitar una.» | Número necesario a tratar en lugar de razón de riesgos |
+| Público general | «De cada cien personas tratadas, una se libra de la complicación; las otras 99 no notan diferencia en esto.» | Frecuencias naturales; sin porcentajes relativos |
+
+El error frecuente es comunicar solo la **reducción relativa** («un 25 % menos»), que es correcta pero suena mucho mayor que la absoluta. Con públicos no especialistas, las frecuencias naturales (de cada cien personas…) se entienden mejor.
+:::
+
+```{dot}
+//| label: fig-c6-niveles
+//| fig-cap: "Un mismo resultado contado a tres públicos."
+//| fig-alt: "Un resultado central del que salen tres versiones: para especialistas con la estadística completa, para profesionales con el número necesario a tratar y para el público general con frecuencias naturales."
+digraph {
+  bgcolor="white"; pad=0.2; rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#eef3fb", color="#1a4d8f", fontname="Helvetica", fontsize=11];
+  edge [color="#45433f", fontname="Helvetica", fontsize=10];
+  d [label="Resultado:\n4 % → 3 %", fillcolor="#fff7e0"];
+  e [label="Especialistas\nRR e IC"]; p [label="Profesionales\nNNT ≈ 100"]; g [label="Público general\n1 de cada 100", fillcolor="#eaf6ef"];
+  d -> e; d -> p; d -> g;
+}
+```
 
 ## Ejercicios graduados
 
@@ -142,7 +171,7 @@ Conviertes una crítica en una muestra de rigor: concedes, cuantificas la incert
 
 ::: {.callout-important appearance="simple" icon="false"}
 ## Reto del capítulo 6 · Tu investigación fuera de la academia
-1. Identifica un **público no especialista** al que afecte tu investigación y, siguiendo a Fischhoff (2013), entrevista a dos personas de ese público: ¿qué saben, qué creen y qué les importa?
+1. Identifica un **público no especialista** al que afecte tu investigación y, siguiendo a @fischhoff2013, entrevista a dos personas de ese público: ¿qué saben, qué creen y qué les importa?
 2. Prepara **tres mensajes clave** y una explicación de la incertidumbre en lenguaje llano.
 3. Elige un formato (artículo divulgativo de 700 palabras, hilo, pódcast de 5 minutos, nota para responsables políticos) y produce la pieza.
 4. Simula una entrevista con un compañero que haga de periodista y anota qué preguntas te costaron.
@@ -157,7 +186,7 @@ Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la
 ::: {.webex-check .webex-box}
 1. Ante una pregunta que no sabes responder, lo más honesto es reconocerlo y ofrecer cómo averiguarlo. {{< torf true >}}
 2. La idea de que el público discrepa solo por falta de información es el modelo de {{< fitb "déficit" "deficit" ignorecase=true >}}
-3. Según Fischhoff (2013), la comunicación científica debe {{< mcq "basarse en la intuición del investigador" "*estudiar empíricamente qué necesita saber el público y comprobar si los mensajes funcionan" "limitarse a publicar más datos" >}}
+3. Según @fischhoff2013, la comunicación científica debe {{< mcq "basarse en la intuición del investigador" "*estudiar empíricamente qué necesita saber el público y comprobar si los mensajes funcionan" "limitarse a publicar más datos" >}}
 4. Representar la postura contraria en su mejor versión antes de criticarla refuerza el debate. {{< torf true >}}
 5. Comunicar la incertidumbre siempre hace que el público confíe menos. {{< torf false >}}
 6. Ante un periodista conviene llevar preparados unos tres mensajes {{< fitb "clave" ignorecase=true >}}
@@ -175,5 +204,5 @@ Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la
 - Bien explicada, puede aumentarla.
 - Preparados y breves.
 - El tono no se discute.
-- Nisbet y Scheufele (2009).
+- @nisbet2009
 :::

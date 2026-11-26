@@ -27,7 +27,11 @@ Se recomienda grabar las charlas (con consentimiento) y usar la retroalimentaci�
 
 ## Autoevaluación en Aula Global y diapositivas
 
-Las preguntas están exportadas a **Moodle XML** en `moodle/`. Las diapositivas de cada capítulo están en [diapositivas/](diapositivas/index.html){target="_blank"}.
+Las preguntas están exportadas a **Moodle XML** (*Banco de preguntas → Importar → Formato Moodle XML*); cada pregunta conserva su explicación como retroalimentación general.
+
+**Descarga el banco de preguntas:** [todo el libro](moodle/autoevaluacion_todo.xml) · por capítulo: [01](moodle/autoevaluacion_01_retorica.xml) · [02](moodle/autoevaluacion_02_argumentar.xml) · [03](moodle/autoevaluacion_03_persuadir.xml) · [04](moodle/autoevaluacion_04_presentaciones.xml) · [05](moodle/autoevaluacion_05_oratoria.xml) · [06](moodle/autoevaluacion_06_publicos.xml)
+
+ Las diapositivas de cada capítulo están en [diapositivas/](diapositivas/index.html){target="_blank"}.
 
 ## Mantenimiento
 

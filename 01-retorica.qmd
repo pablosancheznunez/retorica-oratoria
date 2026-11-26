@@ -32,7 +32,7 @@ Fahnestock, J. (1986). [Accommodating science: The rhetorical life of scientific
 
 Aristóteles definió la retórica como la facultad de **ver, en cada caso, los medios de persuasión disponibles**. No es adorno ni engaño: es el estudio de cómo un discurso consigue que un **auditorio** concreto acepte una afirmación. Toda comunicación científica tiene un auditorio (revisores, tribunal, colegas, público), un propósito y un contexto, así que toda comunicación científica es retórica.
 
-Fahnestock (1986) lo mostró comparando artículos científicos con sus versiones divulgativas: al «acomodar» un hallazgo para el gran público, los textos cambian de **género** (de explicar a celebrar o advertir), eliminan las matizaciones y aumentan la certeza de las afirmaciones. Saber reconocer esos desplazamientos es imprescindible para comunicar con honestidad y para leer críticamente lo que otros cuentan de tu trabajo.
+@fahnestock1986 lo mostró comparando artículos científicos con sus versiones divulgativas: al «acomodar» un hallazgo para el gran público, los textos cambian de **género** (de explicar a celebrar o advertir), eliminan las matizaciones y aumentan la certeza de las afirmaciones. Saber reconocer esos desplazamientos es imprescindible para comunicar con honestidad y para leer críticamente lo que otros cuentan de tu trabajo.
 
 ## 2. Los tres modos de persuasión
 
@@ -101,6 +101,36 @@ Resumen de ejemplo: «Cada año, miles de doctorandos abandonan su tesis (pathos
 Diagnóstico: equilibrio razonable. Mejora posible: añadir una cifra de impacto (por ejemplo, cuánto se reduce el riesgo) para reforzar el logos, y una mención a la colaboración con los programas para reforzar el ethos.
 :::
 
+## Segundo caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Los cinco cánones para una charla de tres minutos
+Una doctoranda prepara su charla para un concurso de tesis en tres minutos. Usa los cinco cánones como lista de trabajo:
+
+| Canon | Qué decide | Su decisión |
+|---|---|---|
+| **Invención** | Qué decir | Una sola idea: su método detecta fraudes en imágenes científicas antes de publicar |
+| **Disposición** | En qué orden | Problema (una imagen manipulada que pasó la revisión), método, resultado, para qué sirve |
+| **Estilo** | Con qué palabras | Sin siglas; una metáfora: «un detector de huellas para imágenes» |
+| **Memoria** | Cómo recordarlo | Memoriza la primera y la última frase; el resto, por bloques |
+| **Pronunciación** | Cómo decirlo | Pausa tras el ejemplo inicial; ensayo grabado tres veces |
+
+El error más común es empezar por el estilo (las diapositivas) sin haber resuelto la invención. Si no puedes decir tu idea en una frase, ninguna diapositiva lo arreglará.
+:::
+
+```{dot}
+//| label: fig-c1-canones
+//| fig-cap: "Los cinco cánones como secuencia de trabajo."
+//| fig-alt: "Cinco cajas en secuencia: invención, disposición, estilo, memoria y pronunciación."
+digraph {
+  bgcolor="white"; pad=0.2; rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#eef3fb", color="#1a4d8f", fontname="Helvetica", fontsize=11];
+  edge [color="#45433f", fontname="Helvetica", fontsize=10];
+  i [label="Invención\nqué decir", fillcolor="#eaf6ef"]; d [label="Disposición\norden"]; e [label="Estilo\npalabras"]; m [label="Memoria"]; p [label="Pronunciación\nvoz y cuerpo"];
+  i -> d -> e -> m -> p;
+}
+```
+
 ## Ejercicios graduados
 
 **Básico.** ¿Qué apelación predomina en «Según 40 años de datos de la OCDE…»?
@@ -135,7 +165,7 @@ Identifica frases concretas de cada tipo, valora el equilibrio para el público 
 5. Actio: presentarlo con la voz y el cuerpo
 :::
 
-::: {.clasificar #ia-c1-fahnestock titulo="Al pasar del artículo a la noticia, ¿qué suele ocurrir? (Fahnestock, 1986)" categorias="Suele ocurrir|No suele ocurrir"}
+::: {.clasificar #ia-c1-fahnestock titulo="Al pasar del artículo a la noticia, ¿qué suele ocurrir? [@fahnestock1986]" categorias="Suele ocurrir|No suele ocurrir"}
 - Desaparecen las matizaciones («podría», «sugiere») → Suele ocurrir
 - La afirmación gana certeza → Suele ocurrir
 - Se añaden los intervalos de confianza → No suele ocurrir
@@ -165,7 +195,7 @@ Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la
 3. El momento oportuno para decir algo es el {{< fitb "kairós" "kairos" ignorecase=true >}}
 4. Reconocer las limitaciones de un estudio siempre debilita la credibilidad. {{< torf false >}}
 5. Ordenar las partes de un discurso corresponde a la {{< mcq "inventio" "*dispositio" "elocutio" "actio" >}}
-6. Según Fahnestock (1986), al divulgar un hallazgo las afirmaciones tienden a ganar {{< fitb "certeza" ignorecase=true >}}
+6. Según @fahnestock1986, al divulgar un hallazgo las afirmaciones tienden a ganar {{< fitb "certeza" ignorecase=true >}}
 7. La comunicación científica rigurosa no necesita retórica. {{< torf false >}}
 8. ¿Qué peligro tiene abusar del pathos?
 

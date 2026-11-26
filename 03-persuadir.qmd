@@ -30,11 +30,11 @@ Dahlstrom, M. F. (2014). [Using narratives and storytelling to communicate scien
 
 ### Lecturas complementarias {.unnumbered}
 
-- Petty, R. E.; Cacioppo, J. T. (1986). [The elaboration likelihood model of persuasion](https://doi.org/10.1016/S0065-2601(08)60214-2). *Advances in Experimental Social Psychology*, 19, 123-205.
+- @petty1986 — 60214-2). *Advances in Experimental Social Psychology*, 19, 123-205.
 
 ## 1. Dos rutas hacia el cambio de actitud
 
-El **modelo de probabilidad de elaboración** (Petty y Cacioppo, 1986) distingue dos rutas:
+El **modelo de probabilidad de elaboración** [@petty1986] distingue dos rutas:
 
 - **Ruta central**: la persona está motivada y es capaz de pensar en el mensaje; evalúa la calidad de los argumentos. Los cambios por esta ruta son **más duraderos** y resistentes.
 - **Ruta periférica**: la persona no puede o no quiere elaborar; responde a señales superficiales (prestigio de la fuente, número de argumentos, atractivo, consenso aparente). Los cambios son más frágiles.
@@ -43,7 +43,7 @@ Para un tribunal o un panel de revisión, la ruta central domina: importan los a
 
 ## 2. Por qué funcionan los relatos
 
-Dahlstrom (2014) resume la investigación sobre narrativa en comunicación científica: frente a los textos expositivos, las narraciones se **comprenden** más fácilmente, se **recuerdan** mejor y resultan más **atractivas** para el público no especialista. Una narrativa tiene personajes, una secuencia causal y un desenlace; transforma datos aislados en una historia con sentido.
+@dahlstrom2014 resume la investigación sobre narrativa en comunicación científica: frente a los textos expositivos, las narraciones se **comprenden** más fácilmente, se **recuerdan** mejor y resultan más **atractivas** para el público no especialista. Una narrativa tiene personajes, una secuencia causal y un desenlace; transforma datos aislados en una historia con sentido.
 
 Plantea también tres preguntas éticas que conviene hacerse antes de usarla:
 
@@ -114,6 +114,35 @@ Versión ABT: «Los doctorandos trabajan muchas horas **y** se espera que eso me
 La segunda tiene tensión (el «pero») y consecuencia (el «por tanto»): se recuerda y motiva a actuar.
 :::
 
+## Segundo caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## El mismo dato, tres encuadres
+Un grupo ha encontrado que el 30 % de los artículos de su campo no comparte los datos pese a declarar que están disponibles. Prepara el mismo hallazgo para tres públicos:
+
+| Público | Encuadre | Frase |
+|---|---|---|
+| Comité de la revista | **Calidad** | «Casi uno de cada tres artículos incumple su propia declaración de disponibilidad: es un problema de verificación editorial.» |
+| Investigadores del área | **Oportunidad** | «Siete de cada diez ya comparten; cumplir es más fácil de lo que parece, y aumenta la reutilización.» |
+| Agencia financiadora | **Rendición de cuentas** | «Una parte de los datos financiados con fondos públicos no es accesible pese a estar comprometida.» |
+
+Los tres encuadres son honestos y parten del mismo dato. Lo que cambia es qué consecuencia se destaca según lo que el público puede hacer. Un encuadre deja de ser legítimo cuando oculta el dato o lo distorsiona.
+:::
+
+```{dot}
+//| label: fig-c3-encuadres
+//| fig-cap: "Un dato, tres encuadres según el público y lo que puede hacer."
+//| fig-alt: "Un dato central del que salen tres flechas hacia tres públicos: comité de revista con encuadre de calidad, investigadores con encuadre de oportunidad y agencia con encuadre de rendición de cuentas."
+digraph {
+  bgcolor="white"; pad=0.2; rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#eef3fb", color="#1a4d8f", fontname="Helvetica", fontsize=11];
+  edge [color="#45433f", fontname="Helvetica", fontsize=10];
+  d [label="Dato: 30 % no comparte\npese a declararlo", fillcolor="#fff7e0"];
+  r [label="Revista\ncalidad"]; i [label="Investigadores\noportunidad"]; a [label="Agencia\nrendición de cuentas"];
+  d -> r; d -> i; d -> a;
+}
+```
+
 ## Ejercicios graduados
 
 **Básico.** Convierte en ABT: «Analizamos 300 conjuntos de datos abiertos y encontramos errores de calidad».
@@ -145,7 +174,7 @@ El esquema se mantiene; cambian el vocabulario, el «pero» que más importa a c
 - «Las abejas disminuyen, pero los datos son escasos, pero además los modelos fallan, pero no hay financiación» → Pero, pero, pero
 :::
 
-::: {.clasificar #ia-c3-etica titulo="¿Uso responsable de la narrativa? (Dahlstrom, 2014)" categorias="Responsable|Problemático"}
+::: {.clasificar #ia-c3-etica titulo="¿Uso responsable de la narrativa? [@dahlstrom2014]" categorias="Responsable|Problemático"}
 - Contar la historia de una paciente típica del ensayo, con su permiso, y dar después los datos de todos → Responsable
 - Elegir el único caso espectacular para sugerir que el tratamiento siempre funciona → Problemático // Caso no representativo.
 - Explicar un método de laboratorio como un relato de detectives para estudiantes de secundaria → Responsable
@@ -171,7 +200,7 @@ Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la
 ::: {.webex-check .webex-box}
 1. Según el modelo de probabilidad de elaboración, los cambios por la ruta central son más duraderos. {{< torf true >}}
 2. Fiarse de un argumento por el prestigio de quien lo dice es un ejemplo de ruta {{< mcq "central" "*periférica" >}}
-3. Según Dahlstrom (2014), las narraciones se recuerdan mejor que los textos expositivos. {{< torf true >}}
+3. Según @dahlstrom2014, las narraciones se recuerdan mejor que los textos expositivos. {{< torf true >}}
 4. En la estructura ABT, la letra B corresponde a {{< fitb "pero" "but" ignorecase=true >}}
 5. Una lista de hechos sin tensión tiene la estructura {{< mcq "Y, pero, por tanto" "*Y, y, y" "Pero, pero, pero" >}}
 6. Presentar «90 % de supervivencia» en lugar de «10 % de mortalidad» es un ejemplo de {{< fitb "encuadre" "framing" ignorecase=true >}}

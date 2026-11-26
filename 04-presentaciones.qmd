@@ -30,7 +30,7 @@ Kosslyn, S. M.; Kievit, R. A.; Russell, A. G.; Shephard, J. M. (2012). [PowerPoi
 
 ## 1. Diapositivas para cerebros humanos
 
-Kosslyn et al. (2012) analizaron cientos de presentaciones y encontraron que la mayoría incumplía principios básicos de la psicología de la percepción, la memoria y la comprensión. Agrupan esos principios en tres objetivos:
+@kosslyn2012 analizaron cientos de presentaciones y encontraron que la mayoría incumplía principios básicos de la psicología de la percepción, la memoria y la comprensión. Agrupan esos principios en tres objetivos:
 
 | Objetivo | Principio | En la práctica |
 |---|---|---|
@@ -81,6 +81,37 @@ Después:
 Prueba: si alguien solo lee el título y mira el gráfico durante cinco segundos, ¿sabe cuál es el resultado?
 :::
 
+## Segundo caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Del guion a un tablero de diapositivas
+Un investigador tiene 15 minutos para presentar un artículo y 32 diapositivas. Reorganiza la charla con un tablero (*storyboard*) en el que cada diapositiva lleva una **afirmación** como título:
+
+| Bloque | Minutos | Afirmaciones (títulos) |
+|---|---|---|
+| Problema | 2 | «Las métricas de impacto premian el volumen de citas, no su uso» |
+| Pregunta | 1 | «¿Qué parte de las citas apoya realmente el resultado citado?» |
+| Método | 3 | «Clasificamos 2000 citas según su función en el texto» |
+| Resultados | 6 | «Solo una de cada cinco citas usa el resultado» · «La proporción no depende de la revista» · «Las autocitas son las más superficiales» |
+| Implicaciones | 2 | «Contar citas no basta para evaluar» |
+| Cierre | 1 | Repite la afirmación principal y deja una pregunta |
+
+Pasa de 32 a 11 diapositivas. Las que desaparecen (detalles del método, tablas completas) van a un anexo para el turno de preguntas.
+:::
+
+```{dot}
+//| label: fig-c4-tablero
+//| fig-cap: "Estructura de una charla de 15 minutos con afirmaciones como títulos."
+//| fig-alt: "Seis bloques en secuencia con su duración: problema 2 minutos, pregunta 1, método 3, resultados 6, implicaciones 2 y cierre 1."
+digraph {
+  bgcolor="white"; pad=0.2; rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#eef3fb", color="#1a4d8f", fontname="Helvetica", fontsize=11];
+  edge [color="#45433f", fontname="Helvetica", fontsize=10];
+  p [label="Problema\n2 min"]; q [label="Pregunta\n1 min"]; m [label="Método\n3 min"]; r [label="Resultados\n6 min", fillcolor="#eaf6ef"]; i [label="Implicaciones\n2 min"]; c [label="Cierre\n1 min"];
+  p -> q -> m -> r -> i -> c;
+}
+```
+
 ## Ejercicios graduados
 
 **Básico.** Convierte el título «Metodología» en un título afirmación para una charla.
@@ -92,7 +123,7 @@ Ejemplo: «Seguimos a 1200 doctorandos durante cinco años con encuestas semestr
 **Avanzado.** Rehaz tres diapositivas de una presentación tuya con el enfoque afirmación-evidencia y compáralas antes y después.
 
 ::: {.webex-solution boton="Ver solución"}
-Documenta qué principio de Kosslyn et al. (2012) aplicas en cada cambio y comprueba la legibilidad desde la última fila (tamaño mínimo de letra).
+Documenta qué principio de @kosslyn2012 aplicas en cada cambio y comprueba la legibilidad desde la última fila (tamaño mínimo de letra).
 :::
 
 
@@ -129,7 +160,7 @@ Documenta qué principio de Kosslyn et al. (2012) aplicas en cada cambio y compr
 ## Reto del capítulo 4 · Rehaz tus diapositivas
 1. Toma una presentación tuya reciente (o una de un congreso de tu campo).
 2. Rehaz **cinco diapositivas** con el enfoque afirmación-evidencia.
-3. Para cada una, explica qué principio de Kosslyn et al. (2012) aplicas.
+3. Para cada una, explica qué principio de @kosslyn2012 aplicas.
 4. Graba los dos minutos correspondientes con las nuevas diapositivas.
 
 **Entrega:** las diapositivas antes y después, y el vídeo, con la [plantilla de entrega](plantillas/entrega_reto.qmd). Este reto **no tiene solución en el libro**.
@@ -145,7 +176,7 @@ Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la
 3. La limitación de la memoria de trabajo se relaciona con la carga {{< fitb "cognitiva" ignorecase=true >}}
 4. Para una charla de 12 minutos, una regla razonable es {{< mcq "30 diapositivas" "*unas 10-12 diapositivas" "una sola diapositiva" >}}
 5. La última diapositiva debería mostrar {{< mcq "«¿Preguntas?»" "«Gracias»" "*el mensaje principal" >}}
-6. Kosslyn et al. (2012) encontraron que la mayoría de las presentaciones analizadas respetaban los principios psicológicos básicos. {{< torf false >}}
+6. @kosslyn2012 encontraron que la mayoría de las presentaciones analizadas respetaban los principios psicológicos básicos. {{< torf false >}}
 7. Hacer que lo importante destaque por tamaño, color o posición aplica el principio de diferencias {{< fitb "destacadas" "perceptibles" ignorecase=true >}}
 8. ¿Qué conviene hacer antes de abrir el programa de diapositivas?
 
